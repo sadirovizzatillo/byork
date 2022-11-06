@@ -728,6 +728,15 @@ nav {
   opacity: 0.9;
 }
 
+.menu__item-link::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
 .menu__item:nth-child(1) a {
   background: -webkit-gradient(linear, left top, right top, from(#059272), to(#059272));
   background: -o-linear-gradient(left, #059272, #059272);
