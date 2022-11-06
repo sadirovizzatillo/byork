@@ -467,7 +467,7 @@ body::-webkit-scrollbar-thumb {
   margin-left: auto;
   width: 100%;
   max-width: 54px;
-  padding: 18px 30px;
+  padding: 16px 24px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -716,7 +716,7 @@ nav {
   color: #fff;
   width: 100%;
   min-width: auto;
-  padding: 16px 30px;
+  padding: 12px 15px;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -1256,11 +1256,11 @@ nav {
 }
 
 .benefits__wrapper .benefits-btn-prev {
-  left: -80px !important;
+  left: -53px !important;
 }
 
 .benefits__wrapper .benefits-btn-next {
-  right: -80px !important;
+  right: -53px !important;
 }
 
 .benefits__slide {
@@ -2412,7 +2412,7 @@ nav {
   font-size: 14px;
   color: #009966;
   border-radius: 10px;
-  border: 1px solid #767675;
+  border: 2px solid #dbdbdb;
   padding: 10px 16px;
   -webkit-transition: all 0.4s;
   -o-transition: all 0.4s;
@@ -2422,6 +2422,7 @@ nav {
 .useful__btn:hover {
   color: #ffffff;
   background: #027750;
+  border: 2px solid transparent;
 }
 
 .useful__wrapper {
@@ -2485,6 +2486,74 @@ nav {
 
 .useful__link:hover {
   color: #027750;
+}
+
+.category {
+  /* Hide the browser's default checkbox */
+  /* Create a custom checkbox */
+  /* On mouse-over, add a grey background color */
+  /* When the checkbox is checked, add a blue background */
+  /* Create the checkmark/indicator (hidden when not checked) */
+  /* Show the checkmark when checked */
+  /* Style the checkmark/indicator */
+}
+
+.category select {
+  margin-bottom: 0px;
+}
+
+.category .container-check {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 22px;
+}
+
+.category .container-check input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.category .checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: #fff;
+  border-radius: 8px;
+}
+
+.category .container-check input:checked ~ .checkmark {
+  background-color: #fff;
+  border: 1px solid blue;
+}
+
+.category .checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.category .container-check input:checked ~ .checkmark:after {
+  display: block;
+}
+
+.category .container-check .checkmark:after {
+  left: 9px;
+  top: 5px;
+  width: 5px;
+  height: 10px;
+  border: solid blue;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
 }
 
 .category__top {
@@ -2929,6 +2998,10 @@ nav {
       -ms-flex-align: center;
           align-items: center;
   gap: 8px;
+}
+
+.product .active_img-product:hover {
+  border: 1px solid blue !important;
 }
 
 .product__wrapper {
@@ -3431,6 +3504,14 @@ nav {
   gap: 10px 10px;
 }
 
+.maybe .category__product-no-have {
+  color: #000;
+}
+
+.maybe .category__product-have {
+  color: #999;
+}
+
 .maybe-2__grid {
   width: 100%;
   display: grid;
@@ -3475,8 +3556,10 @@ nav {
   font-size: 14px;
   color: #009966;
   border-radius: 10px;
-  border: 1px solid #767675;
+  border: 2px solid #dbdbdb;
   padding: 10px 16px;
+  -webkit-box-shadow: inset;
+          box-shadow: inset;
   -webkit-transition: all 0.4s;
   -o-transition: all 0.4s;
   transition: all 0.4s;
@@ -3485,6 +3568,7 @@ nav {
 .maybe-2__top-btn:hover {
   color: #ffffff;
   background: #027750;
+  border: 2px solid transparent;
 }
 
 .dumb__title {
@@ -3514,7 +3598,7 @@ nav {
   font-family: "CodeNext", sans-serif;
   max-width: 580px;
   width: 100%;
-  padding: 20px;
+  padding: 12px;
   padding-right: 40px;
   background: url(../img/search.png) no-repeat center right 15px;
   background-color: #fff;
@@ -3583,7 +3667,7 @@ nav {
 .blog-list__sort-btn {
   max-width: 280px;
   width: 280px;
-  padding: 20px;
+  padding: 12px;
   font-size: 14px;
   line-height: 22px;
   color: #2b2a29;
@@ -3646,6 +3730,7 @@ nav {
   background-image: url(../img/blog/blog-banner.png);
   background-repeat: no-repeat;
   background-size: cover;
+  padding: 20px;
   background-position: center;
 }
 
@@ -3926,7 +4011,11 @@ nav {
   grid-area: new-9;
 }
 
-.news__item {
+.news__item:nth-last-child(-n+4) {
+  border-top: 1px solid gray;
+}
+
+.news__item:first-child {
   border-radius: 10px;
   max-height: 100%;
   background: #ffffff;
@@ -4128,6 +4217,7 @@ nav {
 
 .partners .clients__slide {
   margin-right: 0 !important;
+  width: 230.25px !important;
 }
 
 .partner__top {
@@ -4187,6 +4277,40 @@ nav {
 
 textarea {
   min-height: 150px;
+}
+
+select {
+  font-family: "CodeNext", sans-serif;
+  font-size: 12px;
+  outline: none;
+  max-width: 100%;
+  padding: 16px;
+  margin-bottom: 10px;
+  border-radius: 6px;
+  -webkit-transition: all 0.4s;
+  -o-transition: all 0.4s;
+  transition: all 0.4s;
+  background: #f5f8fb;
+}
+
+select::-webkit-input-placeholder {
+  color: #767675;
+}
+
+select::-moz-placeholder {
+  color: #767675;
+}
+
+select:-ms-input-placeholder {
+  color: #767675;
+}
+
+select::-ms-input-placeholder {
+  color: #767675;
+}
+
+select::placeholder {
+  color: #767675;
 }
 
 input[type=text],
@@ -4636,10 +4760,11 @@ label {
           flex-direction: column;
 }
 
-.office__box input {
+.office__box select {
   background: #ffffff;
-  background: url(../img/down-arrow.png) no-repeat center right 15px;
+  z-index: 999;
   background-color: #fff;
+  padding-right: 12px;
   cursor: pointer;
 }
 
@@ -4666,11 +4791,87 @@ label {
   margin: 25px 0;
 }
 
+.compare__header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.compare .header-right-wrapper {
+  width: 100%;
+}
+
+.compare__active-text {
+  color: green;
+}
+
+.compare__active-line {
+  background-color: #fff;
+  width: 107%;
+}
+
+.compare__switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+.compare__switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.compare__switch-slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #fff;
+  -webkit-transition: 0.4s;
+  -o-transition: 0.4s;
+  transition: 0.4s;
+  padding: 20px;
+  padding-right: 45px;
+}
+
+.compare__switch-slider::before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 6px;
+  bottom: 8px;
+  background-color: darkblue;
+  -webkit-transition: 0.4s;
+  -o-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.compare input:checked + .office__switch-slider {
+  background-color: #fff;
+}
+
+.compare input:focus + .office__switch-slider {
+  -webkit-box-shadow: 0 0 1px #2196F3;
+          box-shadow: 0 0 1px #2196F3;
+}
+
+.compare input:checked + .office__switch-slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
 .compare__header-title {
   font-weight: 700;
   font-size: 30px;
   line-height: 40px;
   margin-bottom: 20px;
+  margin-right: 120px;
 }
 
 .compare__grid {
