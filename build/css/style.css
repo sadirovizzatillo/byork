@@ -4362,6 +4362,23 @@ input[type=button]:focus {
   line-height: 30px;
 }
 
+.contacts__item-green {
+  background-color: #009966;
+}
+
+.contacts__item-green p {
+  color: #fff;
+}
+
+.contacts__item-green a {
+  color: #fff;
+}
+
+.contacts__item-green .contacts__img {
+  -webkit-filter: brightness(0) invert(1);
+          filter: brightness(0) invert(1);
+}
+
 .contacts__soc {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -4557,7 +4574,8 @@ label {
   -webkit-transition: 0.4s;
   -o-transition: 0.4s;
   transition: 0.4s;
-  padding: 8px;
+  padding: 20px;
+  padding-right: 45px;
 }
 
 .office__switch-slider::before {
@@ -4565,8 +4583,8 @@ label {
   content: "";
   height: 26px;
   width: 26px;
-  left: 4px;
-  bottom: 4px;
+  left: 6px;
+  bottom: 8px;
   background-color: darkblue;
   -webkit-transition: 0.4s;
   -o-transition: 0.4s;
