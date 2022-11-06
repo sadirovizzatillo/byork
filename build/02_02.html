@@ -12,18 +12,18 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet"> -->
         <!-- <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
-        <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
-        <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script> -->
-        <link rel="stylesheet" href="./src/scss/libs/nouislider.css">
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
-        <link rel="icon" href="./img/favicon.svg">
-        <link rel="stylesheet" href="./css/style.min.css">
-    </head>
-    
-    <body class="main__body">
+            <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+            <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script> -->
+            <link rel="stylesheet" href="./src/scss/libs/nouislider.css">
+            <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
+            <link rel="icon" href="./img/favicon.svg">
+            <link rel="stylesheet" href="./css/style.min.css">
+        </head>
         
-        <!-- Header -->
-        <header>
+        <body class="main__body">
+            
+            <!-- Header -->
+            <header>
     <!-- Navbar -->
     <div class="navbar-top">
         <div class="container">
@@ -298,12 +298,12 @@
 </header>
 
 
-        
-        <!-- Main Page -->
-        <main>
             
-            <!-- Rengen -->
-            <section class="category">
+            <!-- Main Page -->
+            <main>
+                
+                <!-- Rengen -->
+                <section class="category">
     <div class="container">
         
         <ul class="beard__menu">
@@ -367,13 +367,28 @@
                 <div class="filter__price">
                     <p class="section-text-sm">цена. руб.</p>
                     
-                    <input class="filter__price-range" id="range" type="range">
+                    
+                    <div class="content">
+                        <div id="my-slider" se-min="0" se-step="1" se-min-value="40" se-max-value="40" se-max="100" class="price__slider">
+                            <div class="price__slider-touch-left">
+                                <span></span>
+                            </div>
+                            <div class="price__slider-touch-right">
+                                <span></span>
+                            </div>
+                            <div class="price__slider-line">
+                                <span></span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- <input class="filter__price-range" id="range" type="range"> -->
                     <!-- <div class="filter__price-range" id="range"></div> -->
                     
                     <div class="filter__price-inner">
-                        <input class="filter__price-input" type="number">
+                        <input class="filter__price-input " id="price-min" type="text">
                         
-                        <input class="filter__price-input" type="number">
+                        <input class="filter__price-input " id="price-max" type="text">
                     </div>
                 </div>
                 <div>
@@ -618,23 +633,23 @@
 </section>
 
 
-            
-<!--             
-            <div data-role="main" class="ui-content">
-                <form method="post" action="/action_page_post.php">
-                    <div data-role="rangeslider">
-                        <label for="price-min">Price:</label>
-                        <input type="range" name="price-min" id="price-min" value="200" min="0" max="1000">
-                        <label for="price-max">Price:</label>
-                        <input type="range" name="price-max" id="price-max" value="800" min="0" max="1000">
-                    </div>
-                    <input type="submit" data-inline="true" value="Submit">
-                    <p>The range slider can be useful for allowing users to select a specific price range when browsing products.</p>
-                </form>
-            </div> -->
-            
-            <!-- Benefits -->
-            <section class="benefits">
+                
+                <!--             
+                    <div data-role="main" class="ui-content">
+                        <form method="post" action="/action_page_post.php">
+                            <div data-role="rangeslider">
+                                <label for="price-min">Price:</label>
+                                <input type="range" name="price-min" id="price-min" value="200" min="0" max="1000">
+                                <label for="price-max">Price:</label>
+                                <input type="range" name="price-max" id="price-max" value="800" min="0" max="1000">
+                            </div>
+                            <input type="submit" data-inline="true" value="Submit">
+                            <p>The range slider can be useful for allowing users to select a specific price range when browsing products.</p>
+                        </form>
+                    </div> -->
+                    
+                    <!-- Benefits -->
+                    <section class="benefits">
     <div class="container">
 
         <h2 class="benefits__title section-title">Преимущества работы с нами</h2>
@@ -715,13 +730,13 @@
 </section>
 
 
-            
-            
-            
-        </main>
-        
-        <!-- Footer -->
-        <footer class="footer">
+                    
+                    
+                    
+                </main>
+                
+                <!-- Footer -->
+                <footer class="footer">
     <div class="container">
         <div class="footer__wrapper">
 
@@ -809,11 +824,11 @@
         </div>
     </div>
 </footer>
-        
-    </body>
-    
-    <!-- <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script> -->
-    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
-    <script src="./js/scripts.min.js"></script>
-    
-    </html>
+                
+            </body>
+            
+            <!-- <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script> -->
+            <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+            <script src="./js/scripts.min.js"></script>
+            
+            </html>
