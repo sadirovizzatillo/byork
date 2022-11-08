@@ -93,7 +93,7 @@
     </div>
     
     <nav>
-        <div class="container">
+        <div class="container header-container">
             
             <div class="navbar">
                 <div class="burger">
@@ -104,13 +104,13 @@
                     <a href="index.html"><img src="./img/logo.png" alt="logo"></a>
                 </div>
                 
-                <ul class="menu">
+                <ul class="menu" id="menu">
                     <li class="menu__item">
                         <a href="#" class="menu__item-link dropdown-btn" id="dropdownBtn" data-scroll>
-                            <span class="dropdown-btn-toggle dropdown-btn-open">
+                            <button class="dropdown-btn-toggle dropdown-btn-open">
                                 <img src="./img/header/4dots-icon.png" alt="icon" />
-                                Каталог товаров</span>
-                            <span class="dropdown-btn-toggle dropdown-btn-close"><img src='./img/close.png'> Закрыть</span>
+                                Каталог товаров</button>
+                            <button class="dropdown-btn-toggle dropdown-btn-close"><img src='./img/close.png'> Закрыть</button>
                         </a>
                     </li>
                     <li class="menu__item"><a href="index.html" class="menu__item-link" data-scroll>Главная</a></li>
@@ -302,62 +302,65 @@
 
 		<!-- Hero -->
 		<section class="hero">
-
-    <a class="pop-btn" id="popBtn" href="#">
+    
+    <div class="pop-btn" id="popBtn" href="#">
         <p class="pop-btn__text">
             Узнайте <span class="bold">как выбрать подходящее оборудование</span> и быстро окупить его.
             <button class="pop-btn__close">
                 <img id="closeBtn" src="./img/close.png" alt="close">
             </button>
         </p>
-    </a>
-
+    </div>
+    
+    <div class="pop-btn__bottom-wrapper">
+        <button class="pop-btn__bottom"><img src="../img/up.svg" alt="" width="60" height="60"></button>
+    </div>
+    
     <div class="container">
-
+        
         <div class="hero__wrapper">
-
+            
             <!-- Slider main container -->
             <div class="hero__swiper swiper">
-
+                
                 <h1 class="hero__title title">
                     <img src="./img/hero/big-logo.png" alt="logo">
                     главный дистрибьютор ведущих брендов медицинского оборудования
                 </h1>
-
+                
                 <div class="hero__slider swiper-wrapper">
-
+                    
                     <div class="hero__slide swiper-slide"></div>
                     <div class="hero__slide swiper-slide"></div>
                     <div class="hero__slide swiper-slide"></div>
-
+                    
                 </div>
-
+                
                 <div class="hero__pagination swiper-pagination"></div>
-
+                
                 <div class="hero__btns">
                     <div class="hero-btn-prev swiper-button-prev">
                         <svg width="24" height="24" fill="white">
                             <path
-                                d="M7.293 4.707 14.586 12l-7.293 7.293 1.414 1.414L17.414 12 8.707 3.293 7.293 4.707z" />
-                            </svg>
+                            d="M7.293 4.707 14.586 12l-7.293 7.293 1.414 1.414L17.414 12 8.707 3.293 7.293 4.707z" />
+                        </svg>
                     </div>
                     <div class="hero-btn-next swiper-button-next">
                         <svg width="24" height="24" fill="white">
                             <path
-                                d="M7.293 4.707 14.586 12l-7.293 7.293 1.414 1.414L17.414 12 8.707 3.293 7.293 4.707z" />
-                            </svg>
+                            d="M7.293 4.707 14.586 12l-7.293 7.293 1.414 1.414L17.414 12 8.707 3.293 7.293 4.707z" />
+                        </svg>
                     </div>
                 </div>
             </div>
-
+            
             <div class="hero__content">
                 <p class="hero__text">
                     Оставьте заявку и узнайте <span>как увеличить прибыль компании на +20</span>
                 </p>
-
+                
                 <a class="hero__btn btn" href="#">Оставить заявку</a>
             </div>
-
         </div>
     </div>
 </section>
@@ -365,14 +368,20 @@
 <script>
     let popBtn = document.querySelector('.pop-btn');
     let popBtnClose = document.querySelector('.pop-btn__close');
-
+    let popBtnBottom = document.querySelector('.pop-btn__bottom');
+    let popBtnBottomWrapper = document.querySelector('.pop-btn__bottom-wrapper');
     popBtnClose.addEventListener('click', function () {
-        popBtn.style.opacity = '0';
-
         setTimeout(() => {
             popBtn.style.display = 'none';
-        }, 250);
+        }, 1);
+        popBtnBottomWrapper.classList.add("pop-btn__active")
     });
+    popBtnBottom.addEventListener("click", function() {
+        popBtnBottomWrapper.classList.remove("pop-btn__active")
+        setTimeout(() => {
+            popBtn.style.display = 'block';
+        }, 1);
+    })
 </script>
 
 		<!-- Catalog-list -->
@@ -589,15 +598,16 @@
                     </div>
 
                 </div>
-            </div>
-            <div class="benefits__btns">
-                <div class="benefits-btn-prev swiper-button-prev">
-                    <svg width="24" height="24" fill="black"><path d="M7.293 4.707 14.586 12l-7.293 7.293 1.414 1.414L17.414 12 8.707 3.293 7.293 4.707z"/></svg>
+                <div class="benefits__btns">
+                    <div class="benefits-btn-prev swiper-button-prev">
+                        <svg width="24" height="24" fill="black"><path d="M7.293 4.707 14.586 12l-7.293 7.293 1.414 1.414L17.414 12 8.707 3.293 7.293 4.707z"/></svg>
+                    </div>
+                    <div class="benefits-btn-next swiper-button-next">
+                        <svg width="24" height="24" fill="black"><path d="M7.293 4.707 14.586 12l-7.293 7.293 1.414 1.414L17.414 12 8.707 3.293 7.293 4.707z"/></svg>
+                    </div>
                 </div>
-                <div class="benefits-btn-next swiper-button-next">
-                    <svg width="24" height="24" fill="black"><path d="M7.293 4.707 14.586 12l-7.293 7.293 1.414 1.414L17.414 12 8.707 3.293 7.293 4.707z"/></svg>
-                </div>
             </div>
+           
      
         </div>
 

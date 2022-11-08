@@ -320,6 +320,12 @@ body::-webkit-scrollbar-thumb {
   }
 }
 
+.header-container {
+  -webkit-box-align: baseline !important;
+      -ms-flex-align: baseline !important;
+          align-items: baseline !important;
+}
+
 .navbar-top {
   background: #ffffff;
   padding: 25px 0;
@@ -428,6 +434,9 @@ body::-webkit-scrollbar-thumb {
 
 .dropdown-btn-open {
   gap: 15px;
+  background: transparent;
+  font-weight: 600;
+  color: #fff;
 }
 
 .dropdown-btn-open.active {
@@ -443,6 +452,7 @@ body::-webkit-scrollbar-thumb {
   position: absolute;
   top: 50%;
   left: 50%;
+  background: transparent;
   -webkit-transform: translate(-50%, -50%);
       -ms-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
@@ -671,10 +681,9 @@ nav {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  gap: 4px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 6px;
   padding-bottom: 0;
 }
 
@@ -1104,6 +1113,38 @@ nav {
   transition: all 0.4s;
 }
 
+.pop-btn__bottom {
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+
+.pop-btn__bottom-wrapper {
+  position: fixed;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  right: 57px;
+  bottom: 31px;
+  z-index: 9999;
+  visibility: hidden;
+  width: 300px;
+  background-image: url(../img/pop-img.png);
+  border-radius: 20px;
+}
+
+.pop-btn__bottom-wrapper img {
+  background-color: #1263a0;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+
+.pop-btn__active {
+  visibility: visible;
+}
+
 .pop-btn:hover {
   -webkit-transform: scale(1.01);
       -ms-transform: scale(1.01);
@@ -1259,18 +1300,18 @@ nav {
 }
 
 .benefits__wrapper {
-  max-width: 1206px;
+  max-width: 1242px;
   width: 100%;
   margin: 50px auto 70px;
   position: relative;
 }
 
 .benefits__wrapper .benefits-btn-prev {
-  left: -53px !important;
+  left: 0px !important;
 }
 
 .benefits__wrapper .benefits-btn-next {
-  right: -53px !important;
+  right: 0px !important;
 }
 
 .benefits__slide {
@@ -1315,6 +1356,10 @@ nav {
 .benefits__big-text {
   font-size: 16px;
   line-height: 26px;
+}
+
+.benefits__swiper {
+  padding: 0 41px !important;
 }
 
 .benefits-btn-prev {
@@ -2541,7 +2586,7 @@ nav {
   display: block;
   width: 100%;
   height: 100%;
-  background: #f0f0f0;
+  background: #009966;
   border: 1px solid #a4a4a4;
   border-radius: 50%;
 }
@@ -2555,7 +2600,7 @@ nav {
   top: 16px;
   height: 4px;
   border-radius: 4px;
-  background: #f0f0f0;
+  background: #009966;
   z-index: 0;
   overflow: hidden;
 }
@@ -2878,7 +2923,8 @@ nav {
 }
 
 .category__product-btn:hover {
-  background: #027750;
+  background: #f5f8fb;
+  color: #009966;
 }
 
 .category__pagination-menu {
@@ -3069,8 +3115,72 @@ nav {
   gap: 8px;
 }
 
-.product .active_img-product:hover {
+.product {
+  /* Hide the browser's default checkbox */
+  /* Create a custom checkbox */
+  /* On mouse-over, add a grey background color */
+  /* When the checkbox is checked, add a blue background */
+  /* Create the checkmark/indicator (hidden when not checked) */
+  /* Show the checkmark when checked */
+  /* Style the checkmark/indicator */
+}
+
+.product .swiper-slide-thumb-active {
   border: 1px solid blue !important;
+}
+
+.product .container-check {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.product .container-check input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.product .checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: #fff;
+  border-radius: 8px;
+}
+
+.product .container-check input:checked ~ .checkmark {
+  background-color: #fff;
+  border: 1px solid blue;
+}
+
+.product .checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.product .container-check input:checked ~ .checkmark:after {
+  display: block;
+}
+
+.product .container-check .checkmark:after {
+  left: 9px;
+  top: 5px;
+  width: 5px;
+  height: 10px;
+  border: solid blue;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
 }
 
 .product__wrapper {
@@ -4134,6 +4244,10 @@ nav {
   line-height: 22px;
 }
 
+.new-1 {
+  border-radius: 12px;
+}
+
 .new-1 .news__img {
   width: cover;
   height: 340px;
@@ -4180,6 +4294,7 @@ nav {
 }
 
 .new-2 {
+  border-radius: 12px;
   background-image: url(../img/news/new-2-bg.png);
   background-repeat: no-repeat;
   background-size: cover;
@@ -4201,6 +4316,7 @@ nav {
 }
 
 .new-3 {
+  border-radius: 12px;
   background-image: url(../img/news/new-3-bg.png);
   background-repeat: no-repeat;
   background-size: cover;
@@ -4222,6 +4338,7 @@ nav {
 }
 
 .new-4 {
+  border-radius: 12px;
   background-image: url(../img/news/new-4-bg.png);
   background-repeat: no-repeat;
   background-size: cover;
@@ -4240,6 +4357,11 @@ nav {
 .new-4 .blog__tags-item {
   border: 2px solid #1e5f9a;
   color: #ffffff;
+}
+
+.new-5 img {
+  border-bottom-left-radius: 12px;
+  border-bottom-right-radius: 12px;
 }
 
 .partners__wrapper {
@@ -4779,6 +4901,8 @@ label {
   left: 6px;
   bottom: 8px;
   background-color: darkblue;
+  -webkit-box-shadow: 0 1px 28px #00008b;
+          box-shadow: 0 1px 28px #00008b;
   -webkit-transition: 0.4s;
   -o-transition: 0.4s;
   transition: 0.4s;
@@ -5380,6 +5504,18 @@ label {
   }
 }
 
+@media (max-width: 1800px) {
+  .menu__item-link {
+    padding: 12px 27px;
+  }
+}
+
+@media (max-width: 1500px) {
+  .menu__item-link {
+    padding: 12px 23px;
+  }
+}
+
 @media (max-width: 1449.98px) {
   .container {
     padding: 0 60px;
@@ -5419,9 +5555,33 @@ label {
   }
 }
 
+@media (max-width: 1434.98px) {
+  .menu__item-link {
+    padding: 12px 22px;
+  }
+}
+
+@media (max-width: 1415px) {
+  .menu__item-link {
+    padding: 12px 21px;
+  }
+}
+
+@media (max-width: 1400px) {
+  .menu__item-link {
+    padding: 12px 20px;
+  }
+}
+
 @media (max-width: 1390px) {
   .navbar-top__text-since {
     display: none;
+  }
+}
+
+@media (max-width: 1385px) {
+  .menu__item-link {
+    padding: 12px 14px;
   }
 }
 

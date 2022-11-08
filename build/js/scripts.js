@@ -1,4 +1,20 @@
 // Custom Scripts
+
+    var ok = document.querySelector("#dropdownBtn")
+    var btn = document.querySelector(".dropdown-btn-close")
+    var btn1 = document.querySelector(".dropdown-btn-open")
+
+    
+    ok.addEventListener("click", function() {
+        if(btn.classList.contains("active")){
+            console.log("ehhe")
+        }
+        console.log("salom")
+    })
+
+
+
+ 
 // Custom scripts
 
 // Мобильное меню бургер
@@ -38,7 +54,7 @@ burgerMenu();
 // Вызываем эту функцию, если нам нужно зафиксировать меню при скролле.
 function fixedNav() {
     const nav = document.querySelector("nav");
-
+    
     // тут указываем в пикселях, сколько нужно проскроллить что бы наше меню стало фиксированным
     const breakpoint = 1;
     if (window.scrollY >= breakpoint) {
@@ -53,19 +69,28 @@ window.addEventListener("scroll", fixedNav);
 const catalogBtn = document.getElementById("dropdownBtn");
 
 catalogBtn.onmouseover = function () {
-    catalogBtn.classList.toggle("white");
-    document.getElementById("dropdownMenu").classList.toggle("active-drop");
-    document.body.classList.toggle("lock");
-    catalogBtn.querySelector(".dropdown-btn-close").classList.toggle("active");
-    catalogBtn.querySelector(".dropdown-btn-open").classList.toggle("active");
+    catalogBtn.classList.add("white");
+    document.getElementById("dropdownMenu").classList.add("active-drop");
+    document.body.classList.add("lock");
+    catalogBtn.querySelector(".dropdown-btn-close").classList.add("active");
+    catalogBtn.querySelector(".dropdown-btn-open").classList.add("active");
     // document.getElementById("bgGray").classList.toggle("bg-gray-active");
 };
+catalogBtn.addEventListener("click", function(){
+    if(document.getElementById("dropdownMenu").classList.contains("active-drop")){
+        catalogBtn.classList.remove("white");
+        document.getElementById("dropdownMenu").classList.remove("active-drop");
+        document.body.classList.remove("lock");
+        catalogBtn.querySelector(".dropdown-btn-close").classList.remove("active");
+        catalogBtn.querySelector(".dropdown-btn-open").classList.remove("active");
+    }
+})
 
 const header = document.querySelector('header');
 const drMenu = document.getElementById("dropdownMenu");
 
 drMenu.style.height = "calc(100vh - " + header.offsetHeight + "px)";
- 
+
 
  
 const swiperHero = new Swiper('.hero__swiper', {
@@ -765,4 +790,5 @@ var ZBRangeSlider = function(id) {
     document.getElementById('price-max').value = max;
   }
    
+ 
 

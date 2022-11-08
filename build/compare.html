@@ -92,7 +92,7 @@
     </div>
     
     <nav>
-        <div class="container">
+        <div class="container header-container">
             
             <div class="navbar">
                 <div class="burger">
@@ -103,13 +103,13 @@
                     <a href="index.html"><img src="./img/logo.png" alt="logo"></a>
                 </div>
                 
-                <ul class="menu">
+                <ul class="menu" id="menu">
                     <li class="menu__item">
                         <a href="#" class="menu__item-link dropdown-btn" id="dropdownBtn" data-scroll>
-                            <span class="dropdown-btn-toggle dropdown-btn-open">
+                            <button class="dropdown-btn-toggle dropdown-btn-open">
                                 <img src="./img/header/4dots-icon.png" alt="icon" />
-                                Каталог товаров</span>
-                            <span class="dropdown-btn-toggle dropdown-btn-close"><img src='./img/close.png'> Закрыть</span>
+                                Каталог товаров</button>
+                            <button class="dropdown-btn-toggle dropdown-btn-close"><img src='./img/close.png'> Закрыть</button>
                         </a>
                     </li>
                     <li class="menu__item"><a href="index.html" class="menu__item-link" data-scroll>Главная</a></li>
@@ -531,15 +531,16 @@
                     </div>
 
                 </div>
-            </div>
-            <div class="benefits__btns">
-                <div class="benefits-btn-prev swiper-button-prev">
-                    <svg width="24" height="24" fill="black"><path d="M7.293 4.707 14.586 12l-7.293 7.293 1.414 1.414L17.414 12 8.707 3.293 7.293 4.707z"/></svg>
+                <div class="benefits__btns">
+                    <div class="benefits-btn-prev swiper-button-prev">
+                        <svg width="24" height="24" fill="black"><path d="M7.293 4.707 14.586 12l-7.293 7.293 1.414 1.414L17.414 12 8.707 3.293 7.293 4.707z"/></svg>
+                    </div>
+                    <div class="benefits-btn-next swiper-button-next">
+                        <svg width="24" height="24" fill="black"><path d="M7.293 4.707 14.586 12l-7.293 7.293 1.414 1.414L17.414 12 8.707 3.293 7.293 4.707z"/></svg>
+                    </div>
                 </div>
-                <div class="benefits-btn-next swiper-button-next">
-                    <svg width="24" height="24" fill="black"><path d="M7.293 4.707 14.586 12l-7.293 7.293 1.414 1.414L17.414 12 8.707 3.293 7.293 4.707z"/></svg>
-                </div>
             </div>
+           
      
         </div>
 
