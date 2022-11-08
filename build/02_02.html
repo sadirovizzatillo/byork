@@ -345,9 +345,9 @@
                     <img src="./img/category/sort-1.png" alt="icon">
                 </a>
                 
-                <a class="category__top-icon" href="#">
+                <button class="category__top-icon list-view">
                     <img src="./img/category/sort-2.png" alt="icon">
-                </a>
+                </button>
                 
                 <a class="category__top-icon icon-settings" href="#">
                     <img src="./img/category/sort-3.png" alt="icon">
@@ -456,6 +456,7 @@
                 </div>
                 
                 <div class="category__wrapper">
+
                     <div class="category__product">
                         <img class="category__product-img" src="./img/category/product-1.png" alt="product">
                         
@@ -607,6 +608,25 @@
                     </div>
                     
                 </div>
+
+                <div class="list-view">
+                    <div class="list__product">
+                        <img class="list__product-img" src="./img/category/product-6.png" alt="product" width="100" height="100">
+                        
+                        <p class="category__product-name">Openmark</p>
+                        
+                        
+                        <p class="category__product-no-have">
+                            <img src="./img/category/no-have.png" alt="ellipse">
+                            нет в наличии
+                        </p>
+                        
+                        
+                        <p class="category__product-price section-pretitle">100000</p>
+                        
+                        <a class="category__product-btn btn" href="product.html">Запросить КП</a>
+                    </div>
+                </div>
                 
                 <div class="category__pagination-menu">
                     <a class="category__pagination-prev category__pagination" href="#">
@@ -631,6 +651,16 @@
         
     </div>
 </section>
+
+
+
+<script>
+    var btn = document.querySelector(".list-view");
+    var tableView = document.querySelector(".category__wrapper")
+    btn.addEventListener("click", function(){
+        tableView.classList.add("table-active")
+    })
+</script>
 
 
                 

@@ -2743,6 +2743,10 @@ nav {
   gap: 8px;
 }
 
+.category .table-active {
+  display: none;
+}
+
 .category__top-icon {
   padding: 12px;
   display: -webkit-box;
@@ -3127,6 +3131,7 @@ nav {
 
 .product .swiper-slide-thumb-active {
   border: 1px solid blue !important;
+  border-radius: 12px;
 }
 
 .product .container-check {
@@ -4891,6 +4896,7 @@ label {
   transition: 0.4s;
   padding: 20px;
   padding-right: 45px;
+  border-radius: 8px;
 }
 
 .office__switch-slider::before {
@@ -4901,9 +4907,12 @@ label {
   left: 6px;
   bottom: 8px;
   background-color: darkblue;
-  -webkit-box-shadow: 0 1px 28px #00008b;
-          box-shadow: 0 1px 28px #00008b;
+  -webkit-box-shadow: 0 3px 38px #00007a;
+          box-shadow: 0 3px 38px #00007a;
   -webkit-transition: 0.4s;
+  border-radius: 7px;
+  background-color: #00008b;
+  -webkit-box-shadow: 0 1px 42px #00008b;
   -o-transition: 0.4s;
   transition: 0.4s;
 }
