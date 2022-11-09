@@ -341,9 +341,9 @@
                     
                 </div>
                 
-                <a class="category__top-icon" href="#">
+                <button class="category__top-icon" id="table-view" href="#">
                     <img src="./img/category/sort-1.png" alt="icon">
-                </a>
+                </button>
                 
                 <button class="category__top-icon list-view">
                     <img src="./img/category/sort-2.png" alt="icon">
@@ -368,29 +368,29 @@
                     <p class="section-text-sm">цена. руб.</p>
                     
                     
-                    <div class="content">
-                        <div id="my-slider" se-min="0" se-step="1" se-min-value="40" se-max-value="40" se-max="100" class="price__slider">
-                            <div class="price__slider-touch-left">
-                                <span></span>
+                    <div class="slide__wrapper">
+                        
+                        <div class="slider">
+                            <div class="progress"></div>
+                        </div>
+                        <div class="range-input">
+                            <input type="range" class="range-min" min="0" max="10000" value="2500" step="100">
+                            <input type="range" class="range-max" min="0" max="10000" value="7500" step="100">
+                        </div>
+                        <div class="price-input">
+                            <div class="field">
+                                <span>от</span>
+                                <input type="number" class="input-min" value="2500">
                             </div>
-                            <div class="price__slider-touch-right">
-                                <span></span>
-                            </div>
-                            <div class="price__slider-line">
-                                <span></span>
+                            <div class="field">
+                                <span>до</span>
+                                <input type="number" class="input-max" value="7500">
                             </div>
                         </div>
                     </div>
-                    
-                    <!-- <input class="filter__price-range" id="range" type="range"> -->
-                    <!-- <div class="filter__price-range" id="range"></div> -->
-                    
-                    <div class="filter__price-inner">
-                        <input class="filter__price-input " id="price-min" type="text">
-                        
-                        <input class="filter__price-input " id="price-max" type="text">
-                    </div>
                 </div>
+
+
                 <div>
                     <div class="filter__list">
                         <p class="section-text-sm">тип оборудования</p>
@@ -456,7 +456,7 @@
                 </div>
                 
                 <div class="category__wrapper">
-
+                    
                     <div class="category__product">
                         <img class="category__product-img" src="./img/category/product-1.png" alt="product">
                         
@@ -608,23 +608,99 @@
                     </div>
                     
                 </div>
-
+                
                 <div class="list-view">
                     <div class="list__product">
                         <img class="list__product-img" src="./img/category/product-6.png" alt="product" width="100" height="100">
                         
-                        <p class="category__product-name">Openmark</p>
                         
                         
-                        <p class="category__product-no-have">
-                            <img src="./img/category/no-have.png" alt="ellipse">
-                            нет в наличии
-                        </p>
+                        
+                        <!-- <p class="category__product-name">Openmark</p> -->
+                        <div class="list-view__wrapper-right">
+                            <div class="list-view__wrapper">
+                                <p class="category__product-no-have">
+                                    <img src="./img/category/no-have.png" alt="ellipse">
+                                    нет в наличии
+                                </p>
+                                <p class="category__product-price section-pretitle">100000</p>
+                            </div>
+                            
+                            <a class="category__product-btn btn" href="product.html">Запросить КП</a>
+                        </div>
+                    </div>
+                    <div class="list__product">
+                        <img class="list__product-img" src="./img/category/product-6.png" alt="product" width="100" height="100">
                         
                         
-                        <p class="category__product-price section-pretitle">100000</p>
                         
-                        <a class="category__product-btn btn" href="product.html">Запросить КП</a>
+                        
+                        <!-- <p class="category__product-name">Openmark</p> -->
+                        <div class="list-view__wrapper-right">
+                            <div class="list-view__wrapper">
+                                <p class="category__product-no-have">
+                                    <img src="./img/category/no-have.png" alt="ellipse">
+                                    нет в наличии
+                                </p>
+                                <p class="category__product-price section-pretitle">100000</p>
+                            </div>
+                            
+                            <a class="category__product-btn btn" href="product.html">Запросить КП</a>
+                        </div>
+                    </div>
+                    <div class="list__product">
+                        <img class="list__product-img" src="./img/category/product-6.png" alt="product" width="100" height="100">
+                        
+                        
+                        
+                        
+                        <!-- <p class="category__product-name">Openmark</p> -->
+                        <div class="list-view__wrapper-right">
+                            <div class="list-view__wrapper">
+                                <p class="category__product-no-have">
+                                    <img src="./img/category/no-have.png" alt="ellipse">
+                                    нет в наличии
+                                </p>
+                                <p class="category__product-price section-pretitle">100000</p>
+                            </div>
+                            
+                            <a class="category__product-btn btn" href="product.html">Запросить КП</a>
+                        </div>
+                    </div>
+                    <div class="list__product">
+                        <img class="list__product-img" src="./img/category/product-6.png" alt="product" width="100" height="100">
+                        
+                        
+                        
+                        
+                        <!-- <p class="category__product-name">Openmark</p> -->
+                        <div class="list-view__wrapper-right">
+                            <div class="list-view__wrapper">
+                                <p class="category__product-no-have">
+                                    <img src="./img/category/no-have.png" alt="ellipse">
+                                    нет в наличии
+                                </p>
+                                <p class="category__product-price section-pretitle">100000</p>
+                            </div>
+                            
+                            <a class="category__product-btn btn" href="product.html">Запросить КП</a>
+                        </div>
+                    </div>
+                    <div class="list__product">
+                        <img class="list__product-img" src="./img/category/product-6.png" alt="product" width="100" height="100">
+                        
+                        <!-- <p class="category__product-name">Openmark</p> -->
+                        <div class="list-view__wrapper-right">
+                            <div class="list-view__wrapper">
+                                <p class="category__product-no-have">
+                                    <img src="./img/category/no-have.png" alt="ellipse">
+                                    нет в наличии
+                                </p>
+                                <p class="category__product-price section-pretitle">100000</p>
+                            </div>
+                            
+                            <a class="category__product-btn btn" href="product.html">Запросить КП</a>
+                        </div>
                     </div>
                 </div>
                 
@@ -657,9 +733,56 @@
 <script>
     var btn = document.querySelector(".list-view");
     var tableView = document.querySelector(".category__wrapper")
+    var table = document.getElementById("table-view")
     btn.addEventListener("click", function(){
         tableView.classList.add("table-active")
     })
+    table.addEventListener("click", function(){
+        tableView.classList.remove("table-active")
+    })
+    
+    const rangeInput = document.querySelectorAll(".range-input input"),
+    priceInput = document.querySelectorAll(".price-input input"),
+    range = document.querySelector(".slider .progress");
+    let priceGap = 1000;
+    
+    priceInput.forEach((input) => {
+        input.addEventListener("input", (e) => {
+            let minPrice = parseInt(priceInput[0].value),
+            maxPrice = parseInt(priceInput[1].value);
+            
+            if (maxPrice - minPrice >= priceGap && maxPrice <= rangeInput[1].max) {
+                if (e.target.className === "input-min") {
+                    rangeInput[0].value = minPrice;
+                    range.style.left = (minPrice / rangeInput[0].max) * 100 + "%";
+                } else {
+                    rangeInput[1].value = maxPrice;
+                    range.style.right = 100 - (maxPrice / rangeInput[1].max) * 100 + "%";
+                }
+            }
+        });
+    });
+    
+    rangeInput.forEach((input) => {
+        input.addEventListener("input", (e) => {
+            let minVal = parseInt(rangeInput[0].value),
+            maxVal = parseInt(rangeInput[1].value);
+            
+            if (maxVal - minVal < priceGap) {
+                if (e.target.className === "range-min") {
+                    rangeInput[0].value = maxVal - priceGap;
+                } else {
+                    rangeInput[1].value = minVal + priceGap;
+                }
+            } else {
+                priceInput[0].value = minVal;
+                priceInput[1].value = maxVal;
+                range.style.left = (minVal / rangeInput[0].max) * 100 + "%";
+                range.style.right = 100 - (maxVal / rangeInput[1].max) * 100 + "%";
+            }
+        });
+    });
+    
 </script>
 
 
