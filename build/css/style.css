@@ -349,9 +349,6 @@ body::-webkit-scrollbar-thumb {
           align-items: center;
   padding: 0 30px;
   position: relative;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   border-right: 1px solid #e7e9ec;
 }
 
@@ -505,16 +502,10 @@ body::-webkit-scrollbar-thumb {
 
 .box__2 {
   width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   gap: 20px;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
 }
 
 .box__3 {
@@ -1039,7 +1030,7 @@ nav {
   position: absolute;
   right: 25px;
   bottom: 25px;
-  width: 107px;
+  width: 98px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1062,8 +1053,8 @@ nav {
 }
 
 .swiper-button-prev {
-  width: 40px;
-  height: 40px;
+  width: 35px;
+  height: 35px;
   border-radius: 10px;
   background: inherit;
   -webkit-transform: rotate(-180deg);
@@ -1081,8 +1072,8 @@ nav {
 }
 
 .swiper-button-next {
-  width: 40px;
-  height: 40px;
+  width: 35px;
+  height: 35px;
   border-radius: 10px;
   background: inherit;
 }
@@ -1789,7 +1780,7 @@ nav {
   position: absolute;
   right: 50%;
   bottom: 45px;
-  width: 130px;
+  width: 98px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1956,7 +1947,7 @@ nav {
   position: absolute;
   right: 0;
   top: 20px;
-  width: 130px;
+  width: 100px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2012,7 +2003,7 @@ nav {
   position: absolute;
   right: 0;
   top: 20px;
-  width: 130px;
+  width: 100px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2047,6 +2038,7 @@ nav {
   max-width: 100%;
   position: relative;
   top: -28px;
+  left: 8px;
 }
 
 .doc-review__title {
@@ -2104,8 +2096,12 @@ nav {
 }
 
 .doc-review .doc-review-prev {
+  width: 77px;
+  height: 77px;
   background: #ffffff;
-  border: 6px solid #f5f8fb;
+  border: 9px solid #f5f8fb;
+  right: -6px;
+  border-radius: 18px;
 }
 
 .doc-review .doc-review-prev.swiper-button-disabled {
@@ -2113,8 +2109,12 @@ nav {
 }
 
 .doc-review .doc-review-next {
+  border-radius: 18px;
+  width: 77px;
+  height: 77px;
   background: #ffffff;
-  border: 6px solid #f5f8fb;
+  border: 9px solid #f5f8fb;
+  right: -6px;
 }
 
 .doc-review .doc-review-next.swiper-button-disabled {
@@ -3426,6 +3426,7 @@ nav {
       justify-content: space-around;
   gap: 20px 20px;
   margin: 10px 0;
+  margin-bottom: 32px;
 }
 
 .product__benefits-item {
@@ -3550,6 +3551,7 @@ nav {
 .tabs__swiper {
   max-width: 1155px;
   padding-right: 30px;
+  width: 1155px;
 }
 
 .tabs__swiper.swiper {
@@ -4288,6 +4290,12 @@ nav {
           transform: scale(1.005);
   -webkit-box-shadow: 1px 1px 10px 1px #0000002c;
           box-shadow: 1px 1px 10px 1px #0000002c;
+  background-color: #009966;
+}
+
+.blog__share-link:hover img {
+  -webkit-filter: brightness(0) invert(1);
+          filter: brightness(0) invert(1);
 }
 
 .blog .blog-prev {
@@ -4420,6 +4428,8 @@ nav {
 
 .new-1 .news__box .news__date {
   grid-area: news__date;
+  color: #fff;
+  background-color: #009966;
 }
 
 .new-1 .news__box .news__title {
@@ -4448,15 +4458,18 @@ nav {
 
 .new-2 {
   border-radius: 12px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   background-image: url(../img/news/new-2-bg.png);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
 }
 
-.new-2 .news__date {
+.new-2 .date {
   color: #009966;
-  background: #edf7f5;
+  background-color: #fff;
 }
 
 .new-2 .news__title {
@@ -4470,15 +4483,18 @@ nav {
 
 .new-3 {
   border-radius: 12px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   background-image: url(../img/news/new-3-bg.png);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
 }
 
-.new-3 .news__date {
+.new-3 .date {
   color: #009966;
-  background: #edf7f5;
+  background-color: #fff;
 }
 
 .new-3 .news__title {
@@ -4491,6 +4507,9 @@ nav {
 }
 
 .new-4 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   border-radius: 12px;
   background-image: url(../img/news/new-4-bg.png);
   background-repeat: no-repeat;
@@ -4498,9 +4517,9 @@ nav {
   background-position: center;
 }
 
-.new-4 .news__date {
+.new-4 .date {
   color: #009966;
-  background: #edf7f5;
+  background-color: #fff;
 }
 
 .new-4 .news__title {
@@ -4512,9 +4531,9 @@ nav {
   color: #ffffff;
 }
 
-.new-5 img {
-  border-bottom-left-radius: 12px;
-  border-bottom-right-radius: 12px;
+.new-5 {
+  background: #fff;
+  border-radius: 12px;
 }
 
 .blog-list__search {
@@ -4523,6 +4542,11 @@ nav {
   padding: 12px;
   padding-right: 40px;
   padding-left: 32px;
+}
+
+.date {
+  color: #fff;
+  background-color: #009966;
 }
 
 .partners__wrapper {
@@ -4608,6 +4632,11 @@ nav {
 
 .partner .blog__share-link:hover {
   background: #009966;
+}
+
+.partner .blog__share-link:hover img {
+  -webkit-filter: brightness(0) invert(1);
+          filter: brightness(0) invert(1);
 }
 
 .partner__inner {
@@ -4857,7 +4886,7 @@ input[type=button]:focus {
 }
 
 .contacts__item-green {
-  background-color: #009966;
+  background-color: #059272;
 }
 
 .contacts__item-green p {
@@ -4891,23 +4920,23 @@ input[type=button]:focus {
 }
 
 .link-vk {
-  color: #096;
-  border-bottom: 1px dashed #096;
+  color: #059272;
+  border-bottom: 1px dashed #059272;
 }
 
 .link-inst {
-  color: #096;
-  border-bottom: 1px dashed #096;
+  color: #059272;
+  border-bottom: 1px dashed #059272;
 }
 
 .link-fb {
-  color: #096;
-  border-bottom: 1px dashed #096;
+  color: #059272;
+  border-bottom: 1px dashed #059272;
 }
 
 .link-yt {
-  color: #096;
-  border-bottom: 1px dashed #096;
+  color: #059272;
+  border-bottom: 1px dashed #059272;
 }
 
 .form {
@@ -4946,6 +4975,10 @@ input[type=button]:focus {
       -ms-flex-pack: justify;
           justify-content: space-between;
   gap: 10px;
+}
+
+.form__footer .btn {
+  background-color: #059272;
 }
 
 .form__file {
@@ -5080,15 +5113,14 @@ label {
   width: 26px;
   left: 6px;
   bottom: 8px;
-  background-color: darkblue;
+  background-color: #004d8d;
   -webkit-box-shadow: 0 3px 38px #00007a;
           box-shadow: 0 3px 38px #00007a;
   -webkit-transition: 0.4s;
   border-radius: 7px;
   border: 4px solid #fff;
-  background-color: darkblue;
   box-shadow: #008764 0px 1px 42px;
-  -webkit-box-shadow: 0 1px 42px #00004c;
+  -webkit-box-shadow: 0 1px 42px #004d8d;
   -o-transition: 0.4s;
   transition: 0.4s;
 }
@@ -5252,11 +5284,27 @@ label {
   margin-right: 120px;
 }
 
+.compare .table-top {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 24px;
+}
+
+.compare .table-top p {
+  color: red;
+  border-bottom: 1px dashed red;
+}
+
 .compare__grid {
   display: grid;
   grid-auto-columns: 1fr 1fr;
   grid-template-columns: repeat(4, minmax(240px, auto));
   gap: 20px 20px;
+  overflow-y: hidden;
   grid-template-areas: "compare__menu prod-1 prod-2 prod-3" "tex-1 tex-2 tex-3 tex-4";
   max-width: 100%;
   width: 100%;
@@ -5362,7 +5410,42 @@ label {
 .compare__tex-item {
   padding: 20px 0;
   border-top: 1px solid #e7e9ec;
-  border-bottom: 1px solid #e7e9ec;
+  border-bottom: 1px solid;
+}
+
+.compare table,
+.compare th,
+.compare td {
+  border-collapse: collapse;
+}
+
+.compare tr {
+  border-top: 2px solid #e7e9ec;
+  border-bottom: 2px solid #e7e9ec;
+  cursor: pointer;
+}
+
+.compare tr:hover th {
+  color: #009966;
+}
+
+.compare tr:hover td {
+  background-color: #fff;
+}
+
+.compare th {
+  font-weight: 700;
+  font-size: 16px;
+}
+
+.compare th,
+.compare td {
+  padding: 16px 0;
+  text-align: left;
+}
+
+.compare td {
+  padding: 16px 8px;
 }
 
 .compare .category__product-no-have {
@@ -5723,10 +5806,6 @@ label {
     padding-left: 0;
   }
 
-  .box__2 {
-    max-width: 500px;
-  }
-
   .hero__content {
     max-width: 300px;
     padding: 70px 40px;
@@ -5746,6 +5825,14 @@ label {
 
   .doc-review__thumb {
     max-width: 60%;
+  }
+
+  .tabs__slider {
+    width: 1250px;
+  }
+
+  .tabs__header-item {
+    padding: 20px 4px;
   }
 }
 
