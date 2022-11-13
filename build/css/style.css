@@ -2743,6 +2743,10 @@ nav {
   font-weight: bold;
 }
 
+.category .container-check input:hover ~ .ok {
+  color: #009966;
+}
+
 .category .checkmark:after {
   content: "";
   position: absolute;
@@ -4407,6 +4411,7 @@ nav {
 
 .new-1 {
   border-radius: 12px;
+  cursor: pointer;
 }
 
 .new-1 .news__img {
@@ -4444,6 +4449,10 @@ nav {
   grid-area: news__text;
 }
 
+.new-1 .news__box:hover .news__title {
+  color: #009966;
+}
+
 .new-1 .news__box .news__title {
   font-weight: 700;
   font-size: 20px;
@@ -4465,11 +4474,16 @@ nav {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+  cursor: pointer;
 }
 
 .new-2 .date {
   color: #009966;
   background-color: #fff;
+}
+
+.new-2:hover .news__title {
+  color: #009966;
 }
 
 .new-2 .news__title {
@@ -4490,11 +4504,16 @@ nav {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+  cursor: pointer;
 }
 
 .new-3 .date {
   color: #009966;
   background-color: #fff;
+}
+
+.new-3:hover .news__title {
+  color: #009966;
 }
 
 .new-3 .news__title {
@@ -4515,11 +4534,16 @@ nav {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+  cursor: pointer;
 }
 
 .new-4 .date {
   color: #009966;
   background-color: #fff;
+}
+
+.new-4:hover .news__title {
+  color: #009966;
 }
 
 .new-4 .news__title {
@@ -4532,8 +4556,45 @@ nav {
 }
 
 .new-5 {
+  cursor: pointer;
   background: #fff;
   border-radius: 12px;
+}
+
+.new-5:hover .news__title {
+  color: #009966;
+}
+
+.new-6 {
+  cursor: pointer;
+}
+
+.new-6:hover .news__title {
+  color: #009966;
+}
+
+.new-7 {
+  cursor: pointer;
+}
+
+.new-7:hover .news__title {
+  color: #009966;
+}
+
+.new-8 {
+  cursor: pointer;
+}
+
+.new-8:hover .news__title {
+  color: #009966;
+}
+
+.new-9 {
+  cursor: pointer;
+}
+
+.new-9:hover .news__title {
+  color: #009966;
 }
 
 .blog-list__search {
@@ -5427,6 +5488,7 @@ label {
 
 .compare tr:hover th {
   color: #009966;
+  background-color: #fff;
 }
 
 .compare tr:hover td {
