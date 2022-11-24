@@ -133,10 +133,55 @@
                 </div>
                 
                 <img class="line-null" src="./img/line0.png" alt="line">
+                <div class="body-effect">
+                    <div class="popup__search">
+                        <div class="popup-wrap">
+                            <div class="popup__search-wrapper">
+                                <input type="search" placeholder="Write your question...">
+                                <button class="catalog-icon-search">
+                                    <img src="./img/search.png" alt="icon">
+                                </button>
+                            </div>
+                            <div class="popular__searchs">
+                                <div>
+                                    <h4>Lorem, ipsum.</h4>
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+                                </div>
+                                <div class="popular-search__imgs">
+                                    <img src="../img/product/prod-4.png" alt="product" width="40" height="40">
+                                </div>
+                            </div> 
+                            <div class="popular__searchs">
+                                <div>
+                                    <h4>Lorem, ipsum.</h4>
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+                                </div>
+                                <div class="popular-search__imgs">
+                                    <img src="../img/product/prod-4.png" alt="product" width="40" height="40">
+                                </div>
+                            </div>
+                            
+                            <ul class="popup__search-list">
+                                <li class="popup__search-list-item">popular</li>
+                                <li class="popup__search-list-item">popular</li>
+                                <li class="popup__search-list-item">popular</li>
+                                <li class="popup__search-list-item">popular</li>
+                                <li class="popup__search-list-item">popular</li>
+                                <li class="popup__search-list-item">popular</li>
+                                <li class="popup__search-list-item">popular</li>
+                                <li class="popup__search-list-item">popular</li>
+                            </ul>
+                            <button class="close-btns">
+                                <img src="./img/close.png" alt="icon">
+                            </button>
+                        </div>
+                    </div>
+                </div>
                 
-                <a class="catalog-icon-search" href="#">
+                
+                <button class="catalog-icon-search search-btns">
                     <img src="./img/search.png" alt="icon">
-                </a>
+                </button>
             </div>
         </nav>
         
@@ -296,6 +341,28 @@
         </div>
         
     </header>
+    
+    
+    
+    
+    <script>
+        const btnss = document.querySelector(".search-btns")
+        const closeBtn = document.querySelector(".close-btns")
+        const body = document.querySelector(".body-effect")
+        const searchInput = document.querySelector(".popup__search")
+        btnss.addEventListener("click", () => {
+            body.classList.add("active-body-effect")
+            searchInput.classList.add("popup__search-active")
+            document.querySelector(".navbar").style.display = 'none'
+            document.querySelector(".search-btns").style.display = 'none'
+        })
+        closeBtn.addEventListener("click", () => {
+            document.querySelector(".navbar").style.display = 'flex'
+            document.querySelector(".search-btns").style.display = 'flex'
+            body.classList.remove("active-body-effect")
+            searchInput.classList.remove("popup__search-active")
+        })
+    </script>
     
     
             
