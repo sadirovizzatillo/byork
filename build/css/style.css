@@ -5388,6 +5388,11 @@ label {
           justify-content: center;
 }
 
+.language-select {
+  padding: 7px 3px !important;
+  padding-right: 12px !important;
+}
+
 .compare {
   overflow-x: hidden;
   margin: 25px 0;
