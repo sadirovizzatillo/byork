@@ -2,25 +2,26 @@
 <html lang="ru">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="description" content="Landing Page">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>Сравнение</title>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="description" content="Landing Page">
+	<meta name="viewport"
+		content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<title>Главная страница | BYORK</title>
 
-    <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
+	<!-- <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet"> -->
 
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
-    <link rel="icon" href="./img/favicon.svg">
-    <link rel="stylesheet" href="./css/style.min.css">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+	<link rel="icon" href="./img/favicon.svg">
+	<link rel="stylesheet" href="./css/style.min.css">
 </head>
 
-<body class="main__body">
+<body class="main__body" id="body">
 
-<!-- Header -->
-<header>
+	<!-- Header -->
+	<header>
     <!-- Navbar -->
     <div class="navbar-top">
         <div class="container">
@@ -361,324 +362,272 @@
     
     
 
-<!-- Main Page -->
-<main>
-
-<!-- Compare -->
-<section class="compare">
+	<!-- Main Page -->
+	<main id="main">		
+        <section class="exibition">
     <div class="container">
-        
         <ul class="beard__menu">
             <li class="beard__item"><a href="index.html">главная</a></li>
             
             <p class="beard__arrow">...</p>
             
-            <li class="beard__item"><a href="02_01.html">каталог товаров</a></li>
-            
-            <p class="beard__arrow">...</p>
-            
-            <li class="beard__item beard__item-active"><a href="news.html">сравнение</a></li>
+            <li class="beard__item beard__item-active"><a href="product.html">выставки</a></li>
         </ul>
         
-        <div class="compare__header">
-            <p class="compare__header-title">Сравнение</p>
-            <div class="compare__header-right-wrapper">
-                <div class="office__header-right">
-                    <p>все характеистики</p>                    
-                    <label class="office__switch">
-                        <input type="checkbox">
-                        <span class="office__switch-slider"></span>
-                    </label>
-                    <p>толъко различающиеся</p>                    
+        <div class="exibition-header__titles">
+            <h2>Участие на выставках</h2>
+            <p>На выставке предоставляются различные медицинские оборудования в широком ассортименте от наших основных поставщиков.</p>
+        </div>
+        
+        <div class="exibition__hero">
+            <p>       Начиная с 2016 года мы каждый год участвуем во всех возможных выставках Узбекистана и в том числе KIHE который проходит в Казахстане</p>
+        </div>
+        
+        
+        <div class="exibition__awards">
+            <header class="exibition__awards-header">
+                <h3>Награды</h3>
+            </header>
+            
+            <div class="exibition__awards-main">
+                <div class="exibition__awards-card">
+                    <img src="../img/exibitionawards.png" alt="" width="190" height="250">
+                    <p class="award-date">2016</p>
+                    
+                    <p class="award-para"> TIHE</p>
+                </div>
+                <div class="exibition__awards-card">
+                    <img src="../img/exibitionawards.png" alt="" width="190" height="250">
+                    <p class="award-date">2016</p>
+                    
+                    <p class="award-para"> TIHE</p>
+                </div>
+                <div class="exibition__awards-card">
+                    <img src="../img/exibitionawards.png" alt="" width="190" height="250">
+                    <p class="award-date">2016</p>
+                    
+                    <p class="award-para"> TIHE</p>
+                </div>
+                <div class="exibition__awards-card">
+                    <img src="../img/exibitionawards.png" alt="" width="190" height="250">
+                    <p class="award-date">2016</p>
+                    <p class="award-para"> TIHE</p>
                 </div>
             </div>
         </div>
         
-        <div class="compare__grid">
-            
-            <div class="compare__menu">
-                <a class="compare__menu-item btn" href="#">
-                    Название категории
-                    <span>2</span>
-                </a>
-                
-                <a class="compare__menu-item btn" href="#">
-                    Еще один вид товара
-                    <span>4</span>
-                </a>
-                
-                <a class="compare__menu-item btn" href="#">
-                    Наименование
-                    <span>3</span>
-                </a>
-                
-                <a class="compare__menu-item btn" href="#">
-                    Бронхоскопы
-                    <span>2</span>
-                </a>
-                
-                <p>очиститъ все справнения</p>
-                
-            </div>
-            
-            <div class="category__product-wrapper">
-                <div class="category__product prod-3">
-                    <img class="category__product-img" src="./img/category/product-3.png" alt="product">
-                    
-                    <p class="category__product-name">Openmark</p>
-                    
-                    <p class="category__product-prename">инжекторы</p>
-                    
-                    <p class="category__product-no-have">
-                        <img src="./img/category/no-have.png" alt="ellipse">
-                        нет в наличии
-                    </p>
-                    
-                    <p class="category__product-price section-pretitle">100000 руб.</p>
-                    
-                    <a class="category__product-btn btn" href="product.html">Запросить КП</a>
-                    
+        <section class="company-detail">
+            <div class="detail-cards">
+                <div class="detail-cards__card-blue">
+                    <h4>Детали компании</h4>
                 </div>
-                <button class="back-btn">
-                    <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="10px" y="20px" width="15px" height="15px"
-                    viewBox="0 0 492 492" style="enable-background:new 0 0 492 492;" xml:space="preserve">
-                    <g>
-                        <g>
-                            <path fill="#ff0000" d="M300.188,246L484.14,62.04c5.06-5.064,7.852-11.82,7.86-19.024c0-7.208-2.792-13.972-7.86-19.028L468.02,7.872
-                            c-5.068-5.076-11.824-7.856-19.036-7.856c-7.2,0-13.956,2.78-19.024,7.856L246.008,191.82L62.048,7.872
-                            c-5.06-5.076-11.82-7.856-19.028-7.856c-7.2,0-13.96,2.78-19.02,7.856L7.872,23.988c-10.496,10.496-10.496,27.568,0,38.052
-                            L191.828,246L7.872,429.952c-5.064,5.072-7.852,11.828-7.852,19.032c0,7.204,2.788,13.96,7.852,19.028l16.124,16.116
-                            c5.06,5.072,11.824,7.856,19.02,7.856c7.208,0,13.968-2.784,19.028-7.856l183.96-183.952l183.952,183.952
-                            c5.068,5.072,11.824,7.856,19.024,7.856h0.008c7.204,0,13.96-2.784,19.028-7.856l16.12-16.116
-                            c5.06-5.064,7.852-11.824,7.852-19.028c0-7.204-2.792-13.96-7.852-19.028L300.188,246z"/>
-                        </g>
-                    </g>
-                    
-                </svg>
-            </button>
-        </div>
+                <div class="detail-cards__card">
+                    <h4>400+</h4>
+                    <p>Количество покупателей</p>
+                </div>
+                <div class="detail-cards__card">
+                    <h4>400+</h4>
+                    <p>Количество покупателей</p>
+                </div>
+                <div class="detail-cards__card">
+                    <h4>400+</h4>
+                    <p>Количество покупателей</p>
+                </div>
+            </div>
+            <div class="detail-cards__two">
+                <div class="detail-cards__card">
+                    <h4>400+</h4>
+                    <p>Количество покупателей</p>
+                </div>
+                <div class="detail-cards__card">
+                    <h4>400+</h4>
+                    <p>Количество покупателей</p>
+                </div>
+                <div class="detail-img__card">
+                    <p>lorem25. </p>
+                    <div>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias blanditiis commodi atque eveniet ea eos.</p>
+                        <button>salom</button>
+                    </div>
+                </div>
+            </div>
+        </section>
         
-        <div class="category__product-wrapper">
-            <div class="category__product prod-3">
-                <img class="category__product-img" src="./img/category/product-3.png" alt="product">
-                
-                <p class="category__product-name">Openmark</p>
-                
-                <p class="category__product-prename">инжекторы</p>
-                
-                <p class="category__product-no-have">
-                    <img src="./img/category/no-have.png" alt="ellipse">
-                    нет в наличии
-                </p>
-                
-                <p class="category__product-price section-pretitle">100000 руб.</p>
-                
-                <a class="category__product-btn btn" href="product.html">Запросить КП</a>
-                
-            </div>
-            <button class="back-btn">
-                <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="10px" y="20px" width="15px" height="15px"
-                viewBox="0 0 492 492" style="enable-background:new 0 0 492 492;" xml:space="preserve">
-                <g>
-                    <g>
-                        <path fill="#ff0000" d="M300.188,246L484.14,62.04c5.06-5.064,7.852-11.82,7.86-19.024c0-7.208-2.792-13.972-7.86-19.028L468.02,7.872
-                        c-5.068-5.076-11.824-7.856-19.036-7.856c-7.2,0-13.956,2.78-19.024,7.856L246.008,191.82L62.048,7.872
-                        c-5.06-5.076-11.82-7.856-19.028-7.856c-7.2,0-13.96,2.78-19.02,7.856L7.872,23.988c-10.496,10.496-10.496,27.568,0,38.052
-                        L191.828,246L7.872,429.952c-5.064,5.072-7.852,11.828-7.852,19.032c0,7.204,2.788,13.96,7.852,19.028l16.124,16.116
-                        c5.06,5.072,11.824,7.856,19.02,7.856c7.208,0,13.968-2.784,19.028-7.856l183.96-183.952l183.952,183.952
-                        c5.068,5.072,11.824,7.856,19.024,7.856h0.008c7.204,0,13.96-2.784,19.028-7.856l16.12-16.116
-                        c5.06-5.064,7.852-11.824,7.852-19.028c0-7.204-2.792-13.96-7.852-19.028L300.188,246z"/>
-                    </g>
-                </g>
-                
-            </svg>
-        </button>
-    </div>
-    
-    <div class="category__product-wrapper">
-        <div class="category__product prod-3">
-            <img class="category__product-img" src="./img/category/product-3.png" alt="product">
-            
-            <p class="category__product-name">Openmark</p>
-            
-            <p class="category__product-prename">инжекторы</p>
-            
-            <p class="category__product-no-have">
-                <img src="./img/category/no-have.png" alt="ellipse">
-                нет в наличии
-            </p>
-            
-            <p class="category__product-price section-pretitle">100000 руб.</p>
-            
-            <a class="category__product-btn btn" href="product.html">Запросить КП</a>
-            
-        </div>
-        <button class="back-btn">
-            <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="10px" y="20px" width="15px" height="15px"
-            viewBox="0 0 492 492" style="enable-background:new 0 0 492 492;" xml:space="preserve">
-            <g>
-                <g>
-                    <path fill="#ff0000" d="M300.188,246L484.14,62.04c5.06-5.064,7.852-11.82,7.86-19.024c0-7.208-2.792-13.972-7.86-19.028L468.02,7.872
-                    c-5.068-5.076-11.824-7.856-19.036-7.856c-7.2,0-13.956,2.78-19.024,7.856L246.008,191.82L62.048,7.872
-                    c-5.06-5.076-11.82-7.856-19.028-7.856c-7.2,0-13.96,2.78-19.02,7.856L7.872,23.988c-10.496,10.496-10.496,27.568,0,38.052
-                    L191.828,246L7.872,429.952c-5.064,5.072-7.852,11.828-7.852,19.032c0,7.204,2.788,13.96,7.852,19.028l16.124,16.116
-                    c5.06,5.072,11.824,7.856,19.02,7.856c7.208,0,13.968-2.784,19.028-7.856l183.96-183.952l183.952,183.952
-                    c5.068,5.072,11.824,7.856,19.024,7.856h0.008c7.204,0,13.96-2.784,19.028-7.856l16.12-16.116
-                    c5.06-5.064,7.852-11.824,7.852-19.028c0-7.204-2.792-13.96-7.852-19.028L300.188,246z"/>
-                </g>
-            </g>
-            
-        </svg>
-    </button>
-</div>
-</div>
-
-</div>
-<div class="container" >
-    <div style="width:100%; height: 180px; overflow: auto;">
-        <table style="width:100%; height: 180px; overflow: auto;">
-            <tr>
-                <th>Бренд:</th>
-                <td>Япония</td>
-                <td>Samsung</td>
-                <td>12</td>
-            </tr>
-            <tr>
-                <th>Бренд:</th>
-                <td>Япония</td>
-                <td>Samsung</td>
-                <td>12</td>
-            </tr>
-            <tr>
-                <th>Бренд:</th>
-                <td>Япония</td>
-                <td>Samsung</td>
-                <td>12</td>
-            </tr>
-        </table>
-    </div>
-</div>
-</section>
-
-
-
-<script>
-    const removeBtn = document.querySelectorAll(".back-btn")
-    
-    removeBtn.forEach(btn => {
-        btn.addEventListener("click", () => {
-            const product = btn.closest(".category__product-wrapper")
-            product.style.display = 'none'
-        })
-    })
-</script>
-
-
-
-<!-- Dumb-text -->
-<section class="dumb">
-    <div class="container">
-
-        <p class="dumb__title section-title">Некий заголовок</p>
-
-        <p class="dumb__text">Не следует, однако забывать, что реализация намеченных плановых заданий позволяет выполнять важные задания по разработке дальнейших направлений развития. С другой стороны рамки и место обучения кадров <span class="bold">позволяет выполнять важные задания</span>  по разработке модели развития. Не следует, однако забывать, что укрепление и развитие структуры требуют от нас анализа существенных финансовых и административных условий. Повседневная практика показывает, что рамки и место обучения кадров требуют от нас анализа новых предложений.</p>
-
-        <p class="dumb__text"><span class="bold green">Таким образом консультация с широким активом</span> представляет собой интересный эксперимент проверки новых предложений. Таким образом сложившаяся структура организации представляет собой интересный эксперимент проверки форм развития. Разнообразный и богатый опыт рамки и место обучения кадров требуют от нас анализа направлений прогрессивного развития.</p>
-
-    </div>
-</section>
-
-
-<!-- Benefits -->
-<section class="benefits">
-    <div class="container">
-
-        <h2 class="benefits__title section-title">Преимущества работы с нами</h2>
-
-        <div class="benefits__wrapper">
-          
-            <div class="benefits__swiper swiper">
-                <div class="benefits__slider swiper-wrapper">
-
-                    <div class="benefits__slide swiper-slide ben-1">
-                        <div class="benefits__item">
-                            <img class="benefits__icon" src="./img/benefits/1.png" alt="benefits-img">
-            
-                            <p class="benefits__name">Гарантия до 2-х лет </p>
-            
-                            <p class="benefits__text">В зависимости от оборудования мы предоставляем от 1 до 2 лет гарантии.</p>
+        <section class="wrap">                
+            <div class="wrap__wrapper">
+                <div class="clients__wrapper">
+                    
+                    <div class="clients__swiper swiper">
+                        <h3 class="clients__title section-pretitle">Наши клиенты</h3>
+                        
+                        <div class="clients__slider swiper-wrapper">
+                            
+                            <div class="clients__slide swiper-slide">
+                                <div class="clients__box">
+                                    <img class="clients__img" src="./img/wrap-clients/clients-1.png" alt="client">
+                                    <p class="clients__name">ShoxMed</p>
+                                </div>
+                                
+                                <div class="clients__box">
+                                    <img class="clients__img" src="./img/wrap-clients/clients-2.png" alt="client">
+                                    <p class="clients__name">Med Complex</p>
+                                </div>
+                            </div>
+                            
+                            <div class="clients__slide swiper-slide">
+                                <div class="clients__box">
+                                    <img class="clients__img" src="./img/wrap-clients/clients-3.png" alt="client">
+                                    <p class="clients__name">Zam Zam Med Service</p>
+                                </div>
+                                
+                                <div class="clients__box">
+                                    <img class="clients__img" src="./img/wrap-clients/clients-4.png" alt="client">
+                                    <p class="clients__name">Carmen Plus</p>
+                                </div>
+                            </div>
+                            
+                            <div class="clients__slide swiper-slide">
+                                <div class="clients__box">
+                                    <img class="clients__img" src="./img/wrap-clients/clients-5.png" alt="client">
+                                    <p class="clients__name">Avitsenna Medical Service</p>
+                                </div>
+                                
+                                <div class="clients__box">
+                                    <img class="clients__img" src="./img/wrap-clients/clients-6.png" alt="client">
+                                    <p class="clients__name">Nano Medical Clinic</p>
+                                </div>
+                            </div>
+                            
+                            <div class="clients__slide swiper-slide">
+                                <div class="clients__box">
+                                    <img class="clients__img" src="./img/wrap-clients/clients-1.png" alt="client">
+                                    <p class="clients__name">ShoxMed</p>
+                                </div>
+                                
+                                <div class="clients__box">
+                                    <img class="clients__img" src="./img/wrap-clients/clients-2.png" alt="client">
+                                    <p class="clients__name">Med Complex</p>
+                                </div>
+                            </div>
+                            
                         </div>
-                    </div>
-
-                    <div class="benefits__slide swiper-slide ben-2">
-                        <div class="benefits__item">
-                            <img class="benefits__icon" src="./img/benefits/2.png" alt="benefits-img">
-            
-                            <p class="benefits__name">Бесплатное обслуживание</p>
-            
-                            <p class="benefits__text">Бесплатное сервисное обслуживание 24/7 в период гарантийного срока.</p>
+                        
+                        <div class="clients__btns">
+                            <div class="clients-btn-prev swiper-button-prev">
+                                <svg width="24" height="24" fill="black"><path d="M7.293 4.707 14.586 12l-7.293 7.293 1.414 1.414L17.414 12 8.707 3.293 7.293 4.707z"/></svg>
+                            </div>
+                            <div class="clients-btn-next swiper-button-next">
+                                <svg width="24" height="24" fill="black"><path d="M7.293 4.707 14.586 12l-7.293 7.293 1.414 1.414L17.414 12 8.707 3.293 7.293 4.707z"/></svg>
+                            </div>
                         </div>
+                        
                     </div>
-
-                    <div class="benefits__slide swiper-slide ben-3">
-                        <div class="benefits__item">
-                            <img class="benefits__icon" src="./img/benefits/3.png" alt="benefits-img">
-            
-                            <p class="benefits__name">Бесплатная доставка и обучение</p>
-            
-                            <p class="benefits__text">Бесплатная доставка, установка и обучение вашего персонала.</p>
-                        </div>
-                    </div>
-
-                    <div class="benefits__slide swiper-slide ben-4">
-                        <div class="benefits__item">
-                            <img class="benefits__icon" src="./img/benefits/4.png" alt="benefits-img">
-            
-                            <p class="benefits__name">Консультация и бизнес-план в подарок</p>
-            
-                            <p class="benefits__text">Консультация с предоставлением бизнес-плана по продвижению аппарата.</p>
-                        </div>
-                    </div>
-
-                    <div class="benefits__slide swiper-slide ben-5">
-                        <div class="benefits__item">
-                            <img class="benefits__icon" src="./img/benefits/2.png" alt="benefits-img">
-            
-                            <p class="benefits__name">Консультация и бизнес-план в подарок</p>
-            
-                            <p class="benefits__text">Консультация с предоставлением бизнес-плана по продвижению аппарата.</p>
-                        </div>
-                    </div>
-
+                    
                 </div>
-                <div class="benefits__btns">
-                    <div class="benefits-btn-prev swiper-button-prev">
-                        <svg width="24" height="24" fill="black"><path d="M7.293 4.707 14.586 12l-7.293 7.293 1.414 1.414L17.414 12 8.707 3.293 7.293 4.707z"/></svg>
+                
+                <div class="license__wrapper">
+                    
+                    <div class="license__swiper swiper">
+                        <h3 class="license__title section-pretitle">Лицензии и сертификаты</h3>
+                        
+                        <div class="license__slider swiper-wrapper">
+                            
+                            <div class="license__slide swiper-slide">
+                                <div class="license__box">
+                                    <img class="license__img" src="./img/wrap-license/lic-1.png" alt="license">
+                                    
+                                    <p class="license__text">Название сертификата или лицензии</p>
+                                </div>
+                            </div>
+                            
+                            <div class="license__slide swiper-slide">
+                                <div class="license__box">
+                                    <img class="license__img" src="./img/wrap-license/lic-1.png" alt="license">
+                                    
+                                    <p class="license__text">Название сертификата или лицензии</p>
+                                </div>
+                            </div>
+                            
+                            <div class="license__slide swiper-slide">
+                                <div class="license__box">
+                                    <img class="license__img" src="./img/wrap-license/lic-1.png" alt="license">
+                                    
+                                    <p class="license__text">Название сертификата или лицензии</p>
+                                </div>
+                            </div>
+                            
+                            <div class="license__slide swiper-slide">
+                                <div class="license__box">
+                                    <img class="license__img" src="./img/wrap-license/lic-1.png" alt="license">
+                                    
+                                    <p class="license__text">Название сертификата или лицензии</p>
+                                </div>
+                            </div>
+                            
+                            <div class="license__slide swiper-slide">
+                                <div class="license__box">
+                                    <img class="license__img" src="./img/wrap-license/lic-1.png" alt="license">
+                                    
+                                    <p class="license__text">Название сертификата или лицензии</p>
+                                </div>
+                            </div>
+                            
+                        </div>
+                        
+                        <div class="license__btns">
+                            <div class="license-btn-prev swiper-button-prev">
+                                <svg width="24" height="24" fill="black"><path d="M7.293 4.707 14.586 12l-7.293 7.293 1.414 1.414L17.414 12 8.707 3.293 7.293 4.707z"/></svg>
+                            </div>
+                            <div class="license-btn-next swiper-button-next">
+                                <svg width="24" height="24" fill="black"><path d="M7.293 4.707 14.586 12l-7.293 7.293 1.414 1.414L17.414 12 8.707 3.293 7.293 4.707z"/></svg>
+                            </div>
+                        </div>
+                        
                     </div>
-                    <div class="benefits-btn-next swiper-button-next">
-                        <svg width="24" height="24" fill="black"><path d="M7.293 4.707 14.586 12l-7.293 7.293 1.414 1.414L17.414 12 8.707 3.293 7.293 4.707z"/></svg>
+                    
+                </div>
+            </div>
+        </section>
+
+
+        <div class="exibition-map">
+            <div class="exibition-map__left">
+                <h2><span>Карта продукции</span> установок за всё время в РУз</h2>
+                <div class="exibition-map__cards">
+                    <div class="exibition-map__item">
+                        <img src="../img/exibitionsound.png" alt="">
+                        <h4>74</h4>
+                        <p>УЗИ</p>
+                    </div>
+                    <div class="exibition-map__item">
+                        <img src="../img/exibitionsound.png" alt="">
+                        <h4>74</h4>
+                        <p>УЗИ</p>
+                    </div>
+                    <div class="exibition-map__item">
+                        <img src="../img/exibitionsound.png" alt="">
+                        <h4>74</h4>
+                        <p>УЗИ</p>
+                    </div>
+                    <div class="exibition-map__item">
+                        <img src="../img/exibitionsound.png" alt="">
+                        <h4>74</h4>
+                        <p>УЗИ</p>
                     </div>
                 </div>
             </div>
-           
-     
+            <div class="exibition-map__right">
+                <p>Общее количество проданных оборудований и приборов</p>
+                <h3>5900</h3>
+                <img src="../img/Uzbekistan.png" alt="">
+            </div>
         </div>
-
-        <p class="benefits__big-text">
-            Таким образом сложившаяся структура организации играет важную роль в формировании систем массового участия. Не следует, однако забывать, что консультация с широким активом представляет собой интересный эксперимент проверки систем массового участия. Повседневная практика показывает, что дальнейшее развитие различных форм деятельности требуют определения и уточнения систем массового участия. <span class="bold">Задача организации, в особенности же дальнейшее развитие различных форм деятельности требуют определения и уточнения позиций,</span> занимаемых участниками в отношении поставленных задач. Таким образом укрепление и развитие структуры обеспечивает широкому кругу (специалистов) участие в формировании новых предложений. Задача организации, в особенности же реализация намеченных плановых заданий требуют от нас анализа модели развития.
-        </p>
-
     </div>
 </section>
+	</main>
 
-
-
-
-
-</main>
-
-<!-- Footer -->
-<footer class="footer">
+	<!-- Footer -->
+	<footer class="footer">
     <div class="container">
         <div class="footer__wrapper">
 
@@ -771,6 +720,5 @@
 
 <!-- <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script> -->
 <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
-<script src="./js/scripts.min.js"></script>
-
+<script src="./js/scripts.js"></script>
 </html>
