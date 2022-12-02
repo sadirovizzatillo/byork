@@ -1,0 +1,175 @@
+.services {
+    padding: 50px 0;
+    // .services__title
+    &__title {
+        text-align: center;
+    }
+    // .services__wrapper
+    &__wrapper {
+        margin: 50px 0 0;
+        display: grid; 
+        grid-auto-columns: 1fr; 
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr; 
+        grid-template-rows: 1fr 1fr 1fr; 
+        gap: 20px 20px; 
+        grid-template-areas: 
+            "ser-1 ser-1 ser-1 ser-2 ser-2 ser-2 ser-3 ser-3 ser-3 ser-3 ser-3 ser-3"
+            "ser-4 ser-4 ser-4 ser-4 ser-5 ser-5 ser-5 ser-5 ser-6 ser-6 ser-6 ser-6"
+            "ser-7 ser-7 ser-7 ser-7 ser-7 ser-7 ser-8 ser-8 ser-8 ser-8 ser-8 ser-8";
+
+        .ser-5 { grid-area: ser-5; }
+        .ser-4 { grid-area: ser-4; }
+        .ser-6 { grid-area: ser-6; }
+        .ser-7 { grid-area: ser-7; }
+        .ser-8 { grid-area: ser-8; }
+        .ser-3 { grid-area: ser-3; }
+        .ser-1 { grid-area: ser-1; }
+        .ser-2 { grid-area: ser-2; }
+
+        @media (max-width: $breakpoint992) {
+            grid-template-columns: 1fr 1fr 1fr 1fr; 
+            grid-template-rows: 1fr 1fr 1fr 1fr; 
+            grid-template-areas: 
+                "ser-1 ser-1 ser-2 ser-2"
+                "ser-3 ser-3 ser-4 ser-4"
+                "ser-5 ser-5 ser-6 ser-6"
+                "ser-7 ser-7 ser-8 ser-8"; 
+        }
+
+        @media (max-width: $breakpoint768) {
+            grid-template-columns: 1fr; 
+            grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr; 
+            grid-template-areas: 
+                "ser-1"
+                "ser-2"
+                "ser-3"
+                "ser-4"
+                "ser-5"
+                "ser-6"
+                "ser-7"
+                "ser-8"; 
+        }
+    }
+    // .services__item
+    &__item {
+        border-radius: 10px;
+        height: 300px;
+        min-width: 230px;
+        padding: 25px 35px 35px;
+        color: $mainWhite;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+
+        cursor: pointer;
+        
+        transition: all .4s;
+        &:hover {
+            transform: scale(1.01);
+            box-shadow: 1px 1px 10px 1px rgba(18, 126, 18, 0.363);
+        }
+
+        @media (max-width: $breakpoint992) {
+            padding: 20px 30px 25px;
+        }
+        @media (max-width: $breakpoint768) {
+            padding: 20px;
+            height: auto;
+        }
+        
+
+    }
+    // .services__item-title
+    &__item-title {
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 25px;
+    }
+    // .services__item-text
+    &__item-text {
+        font-size: 14px;
+        line-height: 22px;
+        margin: 6px 0;
+    }
+    // .services__item-btn
+    &__item-btn {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        color: $mainWhite;
+
+        &:hover {
+            color: $mainGreen;
+        }
+    }
+    // .services__item-arrow
+    &__item-arrow {
+    }
+}
+
+
+.ser-1 {
+    // max-width: 23%;
+    max-width: 100%;
+    background-image: url(../img/services/ser-1.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.ser-2 {
+    // max-width: 23%;
+    max-width: 100%;
+    background-image: url(../img/services/ser-2.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.ser-3 {
+    // max-width: 48%;
+    max-width: 100%;
+    background-image: url(../img/services/ser-3.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.ser-4 {
+    // max-width: 31%;
+    max-width: 100%;
+    background-image: url(../img/services/ser-4.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.ser-5 {
+    // max-width: 32%;
+    max-width: 100%;
+    background-image: url(../img/services/ser-5.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.ser-6 {
+    // max-width: 31%;
+    max-width: 100%;
+    background-image: url(../img/services/ser-6.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.ser-7 {
+    // max-width: 48%;
+    max-width: 100%;
+    background-image: url(../img/services/ser-7.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.ser-8 {
+    // max-width: 48%;
+    max-width: 100%;
+    background-image: url(../img/services/ser-8.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}

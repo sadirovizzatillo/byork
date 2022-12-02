@@ -1,0 +1,73 @@
+<section class="stats">
+    <div class="container">
+        
+        <div class="stats__wrapper">
+            
+            <div class="stats__item">
+                <div class="stats__item-wrapper">
+                    <p class="stats__item-title" akhi="5">0</p>
+                    <p>лет</p> 
+                </div>
+
+                
+                <p class="stats__item-text"> <span>средний стаж</span> работников в техническом обслуживании </p>
+            </div>
+            
+            <div class="stats__item">
+                <p class="stats__item-title" akhi="5900">0</p>
+                
+                <p class="stats__item-text">общее <span>количество</span>  предоставленных оборудований и аппаратов </p>
+            </div>
+            
+            <div class="stats__item">
+                <p class="stats__item-title" akhi="148">0</p>
+                
+                <p class="stats__item-text"> <span>моделей</span> оборудования на все направления медицины </p>
+            </div>
+            
+            <div class="stats__item">
+                <p class="stats__item-title" akhi="589">0</p>
+                
+                <p class="stats__item-text">обслуженных <span>клиентов</span> за все время</p>
+            </div>
+            
+            <div class="stats__item">
+                <div class="stats__item-wrapper">
+                    <p class="stats__item-title" akhi="13">0</p>
+                    <p>лет</p> 
+                </div>
+                
+                <p class="stats__item-text"> <span>опыта</span> в сфере медицины и поставки оборудований </p>
+            </div>
+            
+            
+        </div>
+        
+    </div>
+</section>
+
+<script>
+    const counters = document.querySelectorAll('.stats__item-title');
+    const speed = 200;
+    
+    counters.forEach( counter => {
+        const animate = () => {
+            const value = +counter.getAttribute('akhi');
+            const data = +counter.innerText;
+            
+            const time = value / speed;
+            if(data < value) {
+                counter.innerText = Math.ceil(data + time);
+                setTimeout(animate, 1);
+            }else{
+                counter.innerText = value;
+            }
+            
+        }
+        
+        animate();
+    });
+    
+    
+    
+</script>

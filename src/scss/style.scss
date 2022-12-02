@@ -1,0 +1,57 @@
+// Global SCSS-files imports
+@import './others/vars';
+@import './others/reset';
+@import './others/modal';
+@import './others/fonts';
+@import './others/global';
+
+// Sections or Pages SCSS-files imports
+@import './header';
+@import './hero';
+@import './catalog-list';
+@import './benefits';
+@import './services';
+@import './stats';
+@import './events';
+@import './review';
+@import './steps';
+@import './wrap';
+@import './doc-review';
+
+
+@import './missionheros';
+@import './company-detail';
+@import './command';
+@import './exibition';
+
+
+@import './catalog';
+@import './lizing';
+@import './useful';
+
+@import './category';
+
+@import './product';
+@import './tabs';
+@import './maybe';
+@import './dumb-text';
+
+@import './blog-list';
+
+@import './blog';
+
+@import './news';
+
+@import './partners';
+@import './partner-1';
+
+@import './contacts';
+
+@import './compare';
+
+
+
+@import './footer';
+
+// Libs
+// @import './libs/swiper';

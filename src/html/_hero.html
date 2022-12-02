@@ -1,0 +1,82 @@
+<section class="hero">
+    
+    <div class="pop-btn" id="popBtn">
+        <p class="pop-btn__text">
+            Узнайте <span class="bold">как выбрать подходящее оборудование</span> и быстро окупить его.
+            <button class="pop-btn__close">
+                <img id="closeBtn" src="./img/close.png" alt="close">
+            </button>
+        </p>
+    </div>
+    
+    <div class="pop-btn__bottom-wrapper">
+        <button class="pop-btn__bottom"><img src="../img/catalog-list/catalog-1.png" alt="" width="60" height="60"></button>
+    </div>
+    
+    <div class="container">
+        
+        <div class="hero__wrapper">
+            
+            <!-- Slider main container -->
+            <div class="hero__swiper swiper">
+                
+                <h1 class="hero__title title">
+                    <img src="./img/hero/big-logo.png" alt="logo">
+                    главный дистрибьютор ведущих брендов медицинского оборудования
+                </h1>
+                
+                <div class="hero__slider swiper-wrapper">
+                    
+                    <div class="hero__slide swiper-slide"></div>
+                    <div class="hero__slide swiper-slide"></div>
+                    <div class="hero__slide swiper-slide"></div>
+                    
+                </div>
+                
+                <div class="hero__pagination swiper-pagination"></div>
+                
+                <div class="hero__btns">
+                    <div class="hero-btn-prev swiper-button-prev">
+                        <svg width="24" height="24" fill="white">
+                            <path
+                            d="M7.293 4.707 14.586 12l-7.293 7.293 1.414 1.414L17.414 12 8.707 3.293 7.293 4.707z" />
+                        </svg>
+                    </div>
+                    <div class="hero-btn-next swiper-button-next">
+                        <svg width="24" height="24" fill="white">
+                            <path
+                            d="M7.293 4.707 14.586 12l-7.293 7.293 1.414 1.414L17.414 12 8.707 3.293 7.293 4.707z" />
+                        </svg>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="hero__content">
+                <p class="hero__text">
+                    Оставьте заявку и узнайте <span>как увеличить прибыль компании на +20</span>
+                </p>
+                
+                <a class="hero__btn btn" href="#">Оставить заявку</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script>
+    let popBtn = document.querySelector('.pop-btn');
+    let popBtnClose = document.querySelector('.pop-btn__close');
+    let popBtnBottom = document.querySelector('.pop-btn__bottom');
+    let popBtnBottomWrapper = document.querySelector('.pop-btn__bottom-wrapper');
+    popBtnClose.addEventListener('click', function () {
+        setTimeout(() => {
+            popBtn.style.display = 'none';
+        }, 1);
+        popBtnBottomWrapper.classList.add("pop-btn__active")
+    });
+    popBtnBottom.addEventListener("click", function() {
+        popBtnBottomWrapper.classList.remove("pop-btn__active")
+        setTimeout(() => {
+            popBtn.style.display = 'block';
+        }, 1);
+    })
+</script>

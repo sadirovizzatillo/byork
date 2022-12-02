@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="description" content="Landing Page">
+	<meta name="viewport"
+		content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<title>Главная страница | BYORK</title>
+
+	<!-- <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet"> -->
+
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+	<link rel="icon" href="./img/favicon.svg">
+	<link rel="stylesheet" href="./css/style.min.css">
+</head>
+
+<body class="main__body" id="body">
+
+	<!-- Header -->
+	@@include('./html/_header.html')
+
+	<!-- Main Page -->
+	<main id="main">
+
+		<!-- Hero -->
+		@@include('./html/_hero.html')
+
+		<!-- Catalog-list -->
+		@@include('./html/_catalog-list.html')
+
+		<!-- Benefits -->
+		@@include('./html/_benefits.html')
+
+		<!-- Services -->
+		@@include('./html/_services.html')
+
+		<!-- Stats -->
+		@@include('./html/_stats.html')
+
+		<!-- Events -->
+		@@include('./html/_events.html')
+
+		<!-- Review -->
+		@@include('./html/_review.html')
+
+		<!-- Steps -->
+		@@include('./html/_steps.html')
+
+		<!-- Wrap -->
+		@@include('./html/_wrap.html')
+
+		<!-- Doc-review -->
+		@@include('./html/_doc-review.html')
+		
+
+
+	</main>
+
+	<!-- Footer -->
+	@@include('./html/_footer.html')
+
+</body>
+
+<!-- <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script> -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+<script src="./js/scripts.js"></script>
+</html>

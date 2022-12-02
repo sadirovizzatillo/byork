@@ -1,0 +1,85 @@
+.partner {
+    // .partner__top
+    &__top {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 6px;
+        flex-wrap: wrap;
+
+        .section-title {
+            margin-right: auto;
+            margin-left: 10px;
+
+            @media (max-width: $breakpoint480) {
+                margin: 0;
+            }
+        }
+
+        @media (max-width: $breakpoint480) {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+    }
+    .blog__share-link:hover{
+        background: $mainGreen;
+        img{
+            filter: brightness(0) invert(1);
+        }
+    }
+    // .partner__inner
+    &__inner {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 20px 0;
+
+        @media (max-width: $breakpoint480) {
+            gap: 0 0;
+            max-width: 100%;
+            width: 100%;
+        }
+    }
+    // .partner__item
+    &__item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 10px;
+
+        max-width: 300px;
+        width: 100%;
+        padding: 0 10px;
+        border-left: 1px solid #e7e9ec;
+        border-right: 1px solid #e7e9ec;
+
+        @media (max-width: $breakpoint480) {
+            display: grid; 
+            grid-auto-columns: 1fr 1fr; 
+            grid-template-columns: 1fr 50px; 
+            gap: 10px 10px; 
+            grid-template-areas: 
+                "section-title partner__icon"
+                "blog__text partner__icon"; 
+
+            .partner__icon { grid-area: partner__icon;}
+            .section-title { grid-area: section-title; text-align: left; line-height: 20px; }
+            .blog__text { grid-area: blog__text; text-align: left;}
+
+            border-left: none;
+            border-right: none;
+            border-top: 1px solid #e7e9ec;
+            border-bottom: 1px solid #e7e9ec;
+            
+            justify-content: space-between;
+            padding: 15px 0;
+            width: 100%;
+
+            .partner__icon {
+                margin-left: auto;
+            }
+        }
+    }
+}

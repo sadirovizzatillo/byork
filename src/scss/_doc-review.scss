@@ -1,0 +1,117 @@
+.doc-review {
+    padding: 50px 0;
+    
+    .container {
+        display: flex;
+        // gap: 10px;
+    }
+    &__thumb {
+        margin-top: auto;
+        max-width: 100%;
+        position: relative;
+        top: -28px;
+        left: 8px;
+        @media (max-width: $breakpoint1450) {
+            max-width: 60%;
+        }
+        @media (max-width: 1300px) {
+            display: none;
+        }
+    }
+    // .doc-review__title
+    &__title {
+        text-align: center;
+    }
+    // .doc-review__swiper
+    &__swiper {
+        max-width: 800px;
+        width: 100%;
+        margin: 0 auto;
+        padding: 25px 30px 0;
+        margin-top: 25px;
+    }
+    // .doc-review__slider
+    &__slider {
+    }
+    // .doc-review__slide
+    &__slide {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        
+        max-width: 800px;
+        width: 100%;
+        margin: 0 auto;
+        background: $mainWhite;
+        border-radius: 10px;
+        
+        padding: 0 65px 45px;
+        
+        @media (max-width: $breakpoint992) {
+            padding: 0 35px 30px;
+        }
+        
+    }
+    // .doc-review__img
+    &__img {
+        position: relative;
+        top: -25px;
+        max-width: 88px;
+        max-height: 88px;
+        border-radius: 10px;
+    }
+    // .doc-review__name
+    &__name {
+        font-weight: 700;
+        color: $mainGreen;
+    }
+    // .doc-review__rank
+    &__rank {
+        font-size: 12px;
+    }
+    // .doc-review__text
+    &__text {
+        margin-top: 25px;
+        font-size: 14px;
+        
+        @media (max-width: $breakpoint992) {
+            margin-top: 15px;
+        }
+    }
+    
+    
+    .doc-review-prev {
+        width: 77px;
+        height: 77px;
+        background: $mainWhite;
+        border: 9px solid $mainBlueLight;
+        right: -6px;    
+        border-radius: 18px;
+        
+        @media (max-width: $breakpoint480) {
+            display: none;
+        }
+        
+        &.swiper-button-disabled {
+            opacity: 1 !important;
+        }
+        
+    }
+    .doc-review-next {
+        border-radius: 18px;
+        width: 77px;
+        height: 77px;
+        background: $mainWhite;
+        border: 9px solid $mainBlueLight;
+        right: -6px;
+        @media (max-width: $breakpoint480) {
+            display: none;
+        }
+        
+        &.swiper-button-disabled {
+            opacity: 1 !important;
+        }
+        
+    }
+}

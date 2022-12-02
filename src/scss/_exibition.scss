@@ -1,0 +1,145 @@
+.exibition{
+    .exibition-header__titles{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        margin-bottom: 32px;
+        h2{
+            font-weight: 700;
+            font-size: 38px;
+            line-height: 30px;
+        }
+        p{
+            font-weight: 700;
+            font-size: 14px;
+            line-height: 22px;
+            color: $mainBlue;
+        }
+        
+        @media (max-width: $breakpoint768) {
+            grid-template-columns: 1fr;
+            gap: 20px;
+        }
+    }
+    &__hero{
+        background-image: url('../img/exibitionbanner.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+        border-radius: 20px;
+        height: 400px;
+        p{
+            color: #fff;
+            max-width: 600px;
+            display: flex;
+            height: 100%;
+            align-items: flex-end;
+            padding: 30px;
+        }
+    }
+    
+    
+    
+    .exibition__awards{
+        background-color: #fff;
+        padding: 16px;
+        .exibition__awards-main{
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            gap: 12px;
+            .exibition__awards-card{
+                max-width: 280px;
+                img{
+                    padding: 8px;
+                    background-color: $mainBlueLight;
+                    border-radius: 10px;
+                }
+                .award-date{
+                    padding: 16px 8px;
+                    background-color: $mainBlue;
+                    border-radius: 50%;
+                    width: 60px;
+                    font-weight: 700;
+                    height: 60px;
+                    text-align: center;
+                    margin: 0 auto;
+                    border: 6px solid #fff;
+                    position: relative;
+                    bottom: 20px;
+                    color: #fff;
+                }
+                .award-para{
+                    text-align: center;
+                }
+                
+            }
+        }
+    }
+    
+    .exibition-map{
+        background-color: #fff;
+        padding: 16px 32px;
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        gap: 32px;
+        border-radius: 24px;
+        
+        h2{
+            font-weight: 700;
+            font-size: 24px;
+            line-height: 32px;
+            
+            span{
+                color: $mainBlue;
+            }
+        }
+    }
+    .exibition-map__cards{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 8px;
+    }
+    .exibition-map__item{
+        background-color: $mainBlueLight;
+        min-width: 180px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 8px 16px;
+        border-radius: 12px;
+        
+        h4{
+            font-weight: 700;
+            font-size: 32px;
+            line-height: 52px;
+            color: $mainBlue;
+        }
+        p{
+            font-weight: 700;
+        }
+        img{
+            margin-bottom: 32px;
+        }
+    }
+    
+    .exibition-map__right{
+        img{
+            height: 340px;
+            left: 80px;
+            object-fit: contain !important;
+        }
+        h3{
+            position: relative;
+            font-weight: 300;
+            font-size: 90px;
+            color: #004d8c;
+            line-height: 1;
+            top: 44px;
+            left: -110px;
+            text-align: right;
+        }
+        p{
+            position: relative;
+            text-align: right;
+        }
+    }
+}

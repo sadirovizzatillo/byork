@@ -1,0 +1,187 @@
+.useful {
+    // .useful__grid
+    &__grid {
+        border-top: 2px solid #e7e9ec;
+        padding-top: 30px;
+        display: grid;
+        grid-auto-columns: 1fr;
+        grid-template-columns: 1fr 160px;
+        align-items: center;
+        gap: 28px 28px;
+        grid-template-areas:
+            "useful__top-title useful__btn"
+            "useful__wrapper useful__wrapper";
+
+        .useful__wrapper { grid-area: useful__wrapper; }
+        .useful__top-title { grid-area: useful__top-title; }
+        .useful__btn { grid-area: useful__btn; }
+
+        @media (max-width: $breakpoint768) {
+            grid-template-columns: 1fr;
+            grid-template-areas:
+            "useful__top-title"
+            "useful__wrapper"
+            "useful__btn";
+        }
+    }
+    // .useful__top-title
+    &__top-title {
+    }
+    // .useful__btn
+    &__btn {
+        display: flex;
+        justify-content: center;
+        max-width: 160px;
+        width: 100%;
+        font-size: 14px;
+        color: $mainGreen;
+        border-radius: 10px;
+        border: 2px solid rgb(219, 219, 219);
+        padding: 10px 16px;
+        transition: all .4s;
+        
+        &:hover {
+            color: $mainWhite;
+            background: $hoverGreen;
+            border: 2px solid transparent;
+        }
+
+        @media (max-width: $breakpoint768) {
+           margin: 0 auto;
+        }
+    }
+    // .useful__wrapper
+    &__wrapper {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        gap: 24px 20px;
+
+        @media (max-width: $breakpoint992) {
+            grid-template-columns: 1fr 1fr 1fr;
+        }
+        @media (max-width: $breakpoint768) {
+            grid-template-columns: 1fr 1fr;
+        }
+        @media (max-width: $breakpoint480) {
+            grid-template-columns: 1fr;
+        }
+    }
+    // .useful__item
+    &__item {
+        border-radius: 10px;
+
+        cursor: pointer;
+        transition: all .4s;
+
+        &:hover {
+            box-shadow: 1px 1px 10px 1px #0000002c;
+            transform: scale(1.005);
+        }
+
+        // &::before {
+        //     // content: '';
+        //     position: absolute;
+            
+        //     height: 30px;
+
+        //     font-weight: 700;
+        //     font-size: 12px;
+        //     color: $mainGreen;
+        //     padding: 4px 10px;
+        //     background: #edf7f5;
+        //     border-radius: 10px;
+
+        //     width: auto;
+        //     // display: inline-block;
+        //     position: absolute;
+        //     z-index: 5;
+        //     top: 45px;
+        //     left: 15px;
+        // }
+    }
+    // .useful__date
+    &__date {
+        font-weight: 700;
+        font-size: 12px;
+        color: $mainGreen;
+        padding: 4px 10px;
+        background: #edf7f5;
+        border-radius: 10px;
+
+        width: auto;
+        display: inline-block;
+        position: relative;
+        top: 20px;
+        left: 15px;
+    }
+    // .useful__img
+    &__img {
+        max-width: 100%;
+        width: 100%;
+        margin-top: -30px;
+    }
+    // .useful__box
+    &__box {
+        background: $mainWhite;
+        padding: 35px;
+
+        @media (max-width: $breakpoint992) {
+            padding: 25px;
+        }
+        @media (max-width: $breakpoint480) {
+            padding: 20px;
+        }
+    }
+    // .useful__title
+    &__title {
+    }
+    // .useful__text
+    &__text {
+        margin: 18px 0;
+    }
+    // .useful__link
+    &__link {
+        color: $mainGreen;
+
+        border-bottom: 1px dashed $mainGreen;
+        transition: all .3s;
+
+        &:hover {
+            color: $hoverGreen;
+        }
+    }
+}
+
+
+// .usef-1 {
+
+//     &:before {
+//         content: '2020';
+//     }
+
+// }
+
+// .usef-2 {
+
+//     &:before {
+//         content: '2021';
+//     }
+
+// }
+
+// .usef-3 {
+
+//     &:before {
+//         content: '2022';
+//     }
+
+// }
+
+// .usef-4 {
+
+//     &:before {
+//         content: '2022';
+//     }
+
+// }
+

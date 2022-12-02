@@ -1,0 +1,292 @@
+.blog {
+    
+    .mini-2 {
+        background: $mainWhite;
+        padding: 50px 80px;
+        
+        @media (max-width: $breakpoint992) {
+            padding: 35px 40px;
+        }
+        @media (max-width: $breakpoint480) {
+            padding: 30px 20px;
+        }
+    }
+    // .blog__top
+    &__top {
+        background-image: url(../img/blog/blog-banner.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+        padding: 20px;
+        background-position: center;
+        
+        .container-mini {
+            background: none;
+        }
+        
+        @media (max-width: $breakpoint480) {
+            // background-position: right bottom;
+        }
+    }
+    // .blog__top-wrapper
+    &__top-wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+    // .blog__top-date
+    &__top-date {
+        font-weight: 700;
+        font-size: 12px;
+        
+        color: $mainGreen;
+        background: #edf7f5;
+        padding: 2px 8px;
+        border-radius: 4px;
+        
+        margin-top: 130px;
+        
+        @media (max-width: $breakpoint480) {
+            font-size: 10px;
+        }
+    }
+    // .blog__top-title
+    &__top-title {
+        font-weight: 700;
+        font-size: 36px;
+        line-height: 46px;
+        color: $mainWhite;
+        
+        @media (max-width: $breakpoint480) {
+            font-size: 20px;
+            line-height: 26px;
+        }
+    }
+    // .blog__wrapper
+    &__wrapper {
+        display: flex;
+        flex-direction: column;
+        gap: 35px;
+        
+    }
+    // .blog__tags
+    &__tags {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 4px;
+        
+    }
+    // .blog__tags-item
+    &__tags-item {
+        font-size: 11px;
+        line-height: 16px;
+        color: $mainBlack;
+        
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        flex-wrap: wrap;
+        
+        padding: 2px 5px;
+        border-radius: 4px;
+        border: 2px solid #e7e9ec;
+        
+        @media (max-width: $breakpoint480) {
+            font-size: 9px;
+            padding: 2px 3px;
+        }
+    }
+    // .blog__text
+    &__text {
+        
+        @media (max-width: $breakpoint480) {
+            font-size: 12px;
+            line-height: 20px;
+        }
+    }
+    // .blog__pretext
+    &__pretext {
+        font-size: 20px;
+        line-height: 30px;
+        
+        @media (max-width: $breakpoint480) {
+            font-size: 16px;
+            line-height: 22px;
+        }
+    }
+    // .blog__swiper
+    &__swiper {
+        max-width: 100%;
+        width: 100%;
+        
+    }
+    // .blog__slider
+    &__slider {
+    }
+    // .blog__slide
+    &__slide {
+    }
+    // .blog__img
+    &__img {
+        max-width: 100%;
+        width: fit-content;
+    }
+    // .blog__links
+    &__links {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+    // .blog__links-item
+    &__links-item {
+        font-size: 14px;
+        color: $mainGreen;
+        border-bottom: 1px dashed $mainGreen;
+        transition: all .3s;
+        
+        &:hover {
+            color: $hoverGreen;
+        }
+        
+        @media (max-width: $breakpoint480) {
+            font-size: 12px;
+        }
+    }
+    // .blog__menu
+    &__menu {
+    }
+    // .blog__menu-item
+    &__menu-item {
+        margin-bottom: 12px;
+        
+        @media (max-width: $breakpoint480) {
+            font-size: 12px;
+            margin-bottom: 9px;
+        }
+    }
+    // .blog__video
+    &__video {
+        height: 100px;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 10px;
+        
+        background-image: url(../img/blog/video-bg.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+    // .blog__video-link
+    &__video-link {
+        
+        transition: all .4s;
+        
+        &:hover {
+            transform: scale(1.1);
+        }
+    }
+    // .blog__video-icon
+    &__video-icon {
+    }
+    // .blog__box
+    &__box {
+    }
+    // .blog__pretitle
+    &__pretitle {
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 30px;
+        color: $mainGreen;
+        margin-bottom: 10px;
+        
+        @media (max-width: $breakpoint480) {
+            font-size: 18px;
+        }
+    }
+    // .blog__quote
+    &__quote {
+        padding: 35px;
+        background: $mainBlueLight;
+        width: 100%;
+        border-radius: 10px;
+        
+        @media (max-width: $breakpoint480) {
+            padding: 24px;
+        }
+    }
+    // .blog__footer
+    &__footer {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+    // .blog__share
+    &__share {
+        display: flex;
+        align-items: center;
+        gap: 4px;
+        margin-left: auto;
+    }
+    // .blog__share-link
+    &__share-link {
+        font-size: 14px;
+        width: 44px;
+        height: 44px;
+        padding: 5px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 10px;
+        background: $mainBlueLight;
+        
+        &:first-child {
+            margin-left: 15px;
+        }
+        
+        transition: all .4s;
+        
+        &:hover {
+            transform: scale(1.005);
+            box-shadow: 1px 1px 10px 1px #0000002c;
+            background-color: $mainGreen;
+            
+            img{
+                filter: brightness(0) invert(1);
+            }
+        }
+    }
+    .blog-prev {
+        background: $mainBlue;
+        
+        @media (max-width: $breakpoint480) {
+            width: 40px;
+            height: 40px;
+        }
+    }
+    .blog-next {
+        background: $mainBlue;
+        
+        @media (max-width: $breakpoint480) {
+            width: 40px;
+            height: 40px;
+        }
+    }
+}
+
+.swiper {
+}
+.swiper-wrapper {
+}
+.swiper-slide {
+}
+.swiper-button-prev {
+}
+.swiper-button-next {
+}
+.section-pretitle {
+}

@@ -1,0 +1,114 @@
+.lizing {
+    padding: 70px 0;
+    // .lizing__swiper
+    &__swiper {
+        max-width: 1375px;
+        width: 100%;
+        margin: 0 auto;
+        padding: 0 70px;
+
+        @media (max-width: $breakpoint480) {
+            padding: 0;
+        }
+        
+    }
+    // .lizing__slider
+    &__slider {
+    }
+    // .lizing__slide
+    &__slide {
+        max-width: 1275px;
+        width: 100%;
+        border-radius: 10px;
+        padding: 30px;
+
+        background-image: url(../img/lizing/lizing-bg.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+
+        display: grid;
+        grid-template-columns: minmax(200px, 320px) 1fr 180px;
+        grid-auto-columns: 1fr;
+        gap: 20px 20px;
+        align-items: center;
+
+        @media (max-width: $breakpoint768) {
+            grid-template-columns: 1fr 1fr;
+        }
+        @media (max-width: $breakpoint480) {
+            grid-template-columns: 1fr;
+        }
+    }
+    // .lizing__slide-box
+    &__slide-box {
+        max-width: 320px;
+        width: 100%;
+        gap: 20px 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    // .lizing__slide-title
+    &__slide-title {
+        font-weight: 700;
+        font-size: 30px;
+        line-height: 40px;
+        color: $mainWhite;
+    }
+    // .lizing__slide-pretitle
+    &__slide-pretitle {
+        padding: 4px 12px;
+        color: $mainWhite;
+        border-radius: 10px;
+        font-size: 14px;
+        background: $mainGreen;
+    }
+    // .lizing__slide-menu
+    &__slide-menu {
+        margin-right: auto;
+        margin-left: 20px;
+        li {
+            list-style-type: disc;
+            color: $mainWhite;
+            margin-bottom: 5px;
+        }
+    }
+    // .lizing__slide-btn
+    &__slide-btn {
+        color: $mainWhite;
+        background: $mainGreen;
+        width: 100%;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        // margin-left: auto;
+
+        &:hover {
+            background: $hoverGreen;
+        }
+
+        @media (max-width: $breakpoint768) {
+            grid-column: 1 / -1;
+        }
+    }
+    // .lizing__pagination
+    &__pagination {
+    }
+
+
+    .lizing-btn-prev {
+        background: $mainWhite;
+
+        @media (max-width: $breakpoint480) {
+            display: none;
+        }
+    }
+    .lizing-btn-next {
+        background: $mainWhite;
+
+        @media (max-width: $breakpoint480) {
+            display: none;
+        }
+    }
+}

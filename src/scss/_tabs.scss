@@ -1,0 +1,365 @@
+// TABS
+
+.tabs {
+    margin-top: 50px;
+    max-width: 100%;
+    width: 100%;
+    
+    @media (max-width: $breakpoint768) {
+        margin: 0;
+    }
+    
+    &__swiper {
+        max-width: 1155px;
+        padding-right: 30px;
+        width: 1155px;
+        &.swiper {
+            margin-left: none !important;
+            
+        }
+        
+        @media (max-width: $breakpoint768) {
+            max-width: 100%;
+        }
+    }
+    &__slider {
+        max-width: 1155px;
+        width: 100%;
+        
+        @media (max-width: $breakpoint1450) {
+            width: 1250px;
+            // width: 100%;
+            
+        }
+        @media (max-width: $breakpoint768) {
+            max-width: 100%;
+        }
+        
+    }
+    &__slide {
+        max-width: fit-content;
+        width: fit-content;
+    }
+    &__header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 60px;
+        
+        @media (max-width: $breakpoint768) {
+            flex-direction: column-reverse;
+            gap: 30px;
+        }
+        
+        
+        &-item {
+            // width: fit-content;
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 14px;
+            color: $mainBlack;
+            background: $mainWhite;
+            padding: 20px 10px;
+            border-radius: 10px;
+            // white-space: nowrap;
+            letter-spacing: -0.5px;
+            
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            
+            transition: all .2s;
+            
+            cursor: pointer;
+            &.active {
+                font-weight: 700;
+                color: $mainWhite;
+                background: $mainBlue;
+            }
+            @media (max-width: $breakpoint1450) {
+                padding: 20px 4px;
+            }
+            @media (max-width: $breakpoint768) {
+                font-size: 10px;
+                padding: 15px;
+            }
+        }
+    }
+    &__content {
+        margin-top: 50px;
+    }
+}
+
+
+.lizing-btn {
+    max-width: 220px;
+    width: 100%;
+    
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 14px;
+    color: $mainWhite;
+    background: $mainBlue;
+    padding: 20px 10px;
+    border-radius: 10px;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    
+    transition: all .2s;
+    
+    &:hover {
+        background: $hoverBlue;
+    }
+    
+    @media (max-width: $breakpoint480) {
+        font-size: 12px;
+        padding: 14px 10px;
+        max-width: 100%;
+    }
+    
+}
+
+
+
+
+.tabs {
+    // .tabs__content
+    &__content {
+    }
+    // .tabs__content-item
+    &__content-item {
+    }
+}
+
+.tab-1 {
+    width: 100%;
+    // .tab-1__item
+    &__item {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        gap: 10px;
+        padding: 20px 0;
+        border-top: 1px solid #e7e9ec;
+        
+        &:last-child {
+            border-bottom: 1px solid #e7e9ec;
+        }
+        
+        @media (max-width: $breakpoint480) {
+            padding: 12px 0;
+        }
+    }
+    // .tab-1__item-text
+    &__item-text {
+        
+        @media (max-width: $breakpoint480) {
+            font-size: 10px;
+        }
+        
+        &.bold {
+            text-align: right;
+            
+            @media (max-width: $breakpoint480) {
+                font-size: 12px;
+            }
+        }
+    }
+}
+
+
+.tab-2 {
+    // .tab-2__item
+    &__item {
+        margin-bottom: 30px;
+    }
+    // .tab-2__item-text
+    &__item-text {
+        font-size: 16px;
+        margin-bottom: 5px;
+        
+        @media (max-width: $breakpoint480) {
+            font-size: 14px;
+        }
+    }
+}
+
+
+.tab-3 {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px 20px;
+    
+    @media (max-width: $breakpoint768) {
+        grid-template-columns: 1fr;
+    }
+    
+    // .tab-3__desc
+    &__desc {
+    }
+    // .tab-3__title
+    &__title {
+        margin-bottom: 30px;
+        
+        @media (max-width: $breakpoint480) {
+            margin-bottom: 10px;
+        }
+    }
+    // .tab-3__text
+    &__text {
+        max-width: 550px;
+        
+        @media (max-width: $breakpoint480) {
+            font-size: 12px;
+        }
+    }
+    // .tab-3__pays
+    &__pays {
+    }
+    // .tab-3__pays-item
+    &__pays-item {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        gap: 10px;
+        padding: 20px 0;
+        border-top: 1px solid #e7e9ec;
+        
+        &:last-child {
+            border-bottom: 1px solid #e7e9ec;
+        }
+        
+        @media (max-width: $breakpoint480) {
+            padding: 10px 0;
+        }
+    }
+    // .tab-3__pays-box
+    &__pays-box {
+        display: flex;
+        gap: 8px;
+        align-items: center;
+    }
+    // .tab-3__pays-input
+    &__pays-input {
+        width: 22px;
+        height: 22px;
+    }
+    // .tab-3__pays-link
+    &__pays-link {
+        font-size: 14px;
+        
+        color: $mainGreen;
+        border-bottom: 1px dashed $mainGreen;
+        transition: all .3s;
+        
+        &:hover {
+            color: $hoverGreen;
+        }
+        
+        @media (max-width: $breakpoint480) {
+            font-size: 12px;
+        }
+    }
+}
+
+
+.tab-4 {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 20px;
+    border-radius: 10px;
+    background: $mainBlue;
+    padding: 45px;
+    
+    @media (max-width: $breakpoint768) {
+        flex-direction: column;
+        padding: 35px;
+    }
+    @media (max-width: $breakpoint480) {
+        align-items: center;
+        justify-content: center;
+        padding: 20px;
+    }
+    
+    // .tab-4__box
+    &__box {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        
+        @media (max-width: $breakpoint480) {
+            gap: 15px;
+        }
+    }
+    // .tab-4__text
+    &__text {
+        max-width: 390px;
+        font-size: 16px;
+        line-height: 30px;
+        color: $mainWhite;
+        
+        @media (max-width: $breakpoint480) {
+            font-size: 14px;
+            line-height: 22px;
+        }
+    }
+    // .tab-4__pretext
+    &__pretext {
+        color: $mainWhite;
+        
+        @media (max-width: $breakpoint480) {
+            font-size: 12px;
+        }
+    }
+    // .tab-4__btn
+    &__btn {
+        color: $mainWhite;
+        background: $mainGreen;
+        font-weight: 700;
+        min-width: 160px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        @media (max-width: $breakpoint480) {
+            max-width: 100%;
+            width: 100%;
+        }
+        
+        &:hover {
+            background: $hoverGreen;
+        }
+    }
+}
+
+
+.tab-5 {
+    // .tab-5__item
+    &__item {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        margin-bottom: 15px;
+    }
+    // .tab-5__link
+    &__link {
+        font-size: 14px;
+        color: $mainBlack;
+        border-bottom: 1px dashed $mainGreen;
+        transition: all .3s;
+        
+        &:hover {
+            color: $hoverGreen;
+        }
+        
+        @media (max-width: $breakpoint480) {
+            font-size: 12px;
+        }
+    }
+}

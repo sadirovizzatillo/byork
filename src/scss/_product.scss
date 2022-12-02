@@ -1,0 +1,359 @@
+.product {
+    .swiper-slide-thumb-active{
+        border: 2px solid blue !important;
+        border-radius: 12px;
+    }
+    .container-check {  
+        display: block;
+        position: relative;
+        padding-left: 35px;
+        margin-bottom: 12px;
+        cursor: pointer;
+        font-size: 16px;
+        
+    }
+    
+    /* Hide the browser's default checkbox */
+    .container-check input {
+        position: absolute;
+        opacity: 0;
+        cursor: pointer;
+        height: 0;
+        width: 0;
+    }
+    
+    /* Create a custom checkbox */
+    .checkmark {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 25px;
+        width: 25px;
+        background-color: #fff;
+        border-radius: 8px;
+    }
+    
+    /* On mouse-over, add a grey background color */
+    // .container-check:hover input ~ .checkmark {
+        //     background-color: #ccc;
+        // }
+        
+        /* When the checkbox is checked, add a blue background */
+        .container-check input:checked ~ .checkmark {
+            background-color: #fff;
+            border:2px solid blue;
+        }
+        
+        /* Create the checkmark/indicator (hidden when not checked) */
+        .checkmark:after {
+            content: "";
+            position: absolute;
+            display: none;
+        }
+        
+        /* Show the checkmark when checked */
+        .container-check input:checked ~ .checkmark:after {
+            display: block;
+        }
+        .container-check input:checked ~  .ok{
+            color: #000;
+            font-weight: bold;
+        }
+        /* Style the checkmark/indicator */
+        .container-check .checkmark:after {
+            left: 9px;
+            top: 5px;
+            width: 5px;
+            height: 10px;
+            border: solid blue;
+            border-width: 0 3px 3px 0;
+            -webkit-transform: rotate(45deg);
+            -ms-transform: rotate(45deg);
+            transform: rotate(45deg);
+        }
+        // .product__wrapper
+        &__wrapper {
+            display: grid; 
+            grid-auto-columns: 1fr; 
+            grid-template-columns: minmax(400px, 600px) 1fr; 
+            gap: 20px 60px; 
+            grid-template-areas: 
+            "product__slider product__top"
+            "product__slider product__content"; 
+            
+            .product__slider { grid-area: product__slider; }
+            .product__top { grid-area: product__top; }
+            .product__content { grid-area: product__content; }
+            
+            @media (max-width: $breakpoint992) {
+                margin-top: 20px;
+                
+                grid-template-columns: minmax(auto, 100%);
+                grid-template-areas: 
+                "product__top"
+                "product__slider"
+                "product__content";
+            }
+        }
+        // .product__top
+        &__top {
+            
+            display: grid; 
+            grid-auto-columns: 1fr; 
+            grid-template-columns: minmax(170px, auto) 100px 94px; 
+            gap: 20px 20px; 
+            align-items: flex-end;
+            grid-template-areas: 
+            "btn__back product__have product__compare"
+            "product__title product__title product__title"; 
+            
+            .product__compare { grid-area: product__compare; }
+            .product__have { grid-area: product__have; }
+            .product__title { grid-area: product__title; }
+            .btn__back { grid-area: btn__back; margin-right: auto;}
+            
+            @media (max-width: $breakpoint480) {
+                grid-template-columns: 1fr 94px;
+                grid-template-areas: 
+                "btn__back btn__back"
+                "product__title product__title"
+                "product__have product__compare"; 
+            }
+        }
+        // .product__title
+        &__title {
+            
+            @media (max-width: $breakpoint480) {
+                font-size: 25px;
+                line-height: 40px;
+            }
+        }
+        // .product__have
+        &__have {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        // .product__compare
+        &__compare {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            
+            color: $mainBlue;
+            border-bottom: 1px dashed $mainBlue;
+            transition: all .3s;
+            
+            &:hover {
+                color: $hoverBlue;
+            }
+        }
+        // .product__slider
+        &__slider {
+            max-width: 900px;
+            width: 100%;
+        }
+        // .product__content
+        &__content {
+        }
+        // .product__benefits
+        &__benefits {
+            display: grid; 
+            grid-auto-columns: 1fr; 
+            grid-template-columns: 135px 135px 140px; 
+            justify-content: space-around;
+            gap: 20px 20px; 
+            
+            margin: 10px 0;
+            margin-bottom: 32px;
+            
+            @media (max-width: $breakpoint480) {
+                grid-template-columns: 1fr 1fr 1fr;
+                gap: 10px 10px;
+                
+                margin: 15px 0;
+            }
+        }
+        // .product__benefits-item
+        &__benefits-item {
+            display: grid; 
+            grid-auto-columns: 1fr; 
+            grid-template-columns: 1fr 1fr; 
+            gap: 10px 6px; 
+            grid-template-areas: 
+            "product__benefits-img product__benefits-text"
+            ". free-icon"; 
+            
+            .product__benefits-img { grid-area: product__benefits-img; }
+            .product__benefits-text { grid-area: product__benefits-text; }
+            .free-icon { grid-area: free-icon; }
+            
+            @media (max-width: $breakpoint480) {
+                grid-template-columns: 1fr; 
+                grid-template-areas: 
+                "product__benefits-img"
+                "product__benefits-text"
+                "free-icon"; 
+            }
+        }
+        // .product__benefits-img
+        &__benefits-img {
+        }
+        // .product__benefits-text
+        &__benefits-text {
+            
+            @media (max-width: $breakpoint480) {
+                font-size: 11px;
+                line-height: 16px;
+            }
+        }
+        // .product__list
+        &__list {
+        }
+        // .product__list-item
+        &__list-item {
+            list-style-type: disc;
+            margin-left: 20px;
+            margin-bottom: 20px;
+            
+            @media (max-width: $breakpoint480) {
+                font-size: 12px;
+                line-height: 20px;
+                
+                margin-bottom: 10px;
+                margin-left: 10px;
+            }
+            
+        }
+        // .product__company
+        &__company {
+            display: grid; 
+            grid-auto-columns: 1fr; 
+            grid-auto-rows: 60px; 
+            grid-template-columns: 1fr 1fr 1fr; 
+            
+            @media (max-width: $breakpoint480) {
+                grid-template-columns: 1fr; 
+                grid-auto-rows: 50px; 
+                
+                margin-top: 20px;
+            }
+        }
+        // .product__company-item
+        &__company-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            
+            border-left: 1px solid #e7e9ec;
+            border-right: 1px solid #e7e9ec;
+            
+            @media (max-width: $breakpoint480) {
+                border-left: none;
+                border-right: none;
+                
+                border-top: 1px solid #e7e9ec;
+                border-bottom: 1px solid #e7e9ec;
+                
+                flex-direction: row;
+                justify-content: space-between;
+                
+            }
+        }
+        // .product__company-title
+        &__company-title {
+            font-size: 14px;
+            text-align: center;
+            
+            @media (max-width: $breakpoint480) {
+                font-size: 10px;
+            }
+        }
+        // .product__company-name
+        &__company-name {
+            font-weight: 700;
+            text-align: center;
+            
+            @media (max-width: $breakpoint480) {
+                font-size: 12px;
+            }
+        }
+        // .product__price
+        &__price {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 10px;
+            
+            margin: 30px 0 40px;
+            
+            @media (max-width: $breakpoint480) {
+                flex-direction: column;
+            }
+        }
+        // .product__price-text
+        &__price-text {
+            font-weight: 700;
+            font-size: 24px;
+            line-height: 40px;
+        }
+        // .product__price-btn
+        &__price-btn {
+            max-width: 280px;
+            width: 100%;
+            min-width: 120px;
+            
+            font-weight: 700;
+            color: $mainWhite;
+            justify-content: center;
+            
+            background: $mainGreen;
+            
+            &:hover {
+                background: $hoverGreen;
+            }
+            
+            @media (max-width: $breakpoint768) {
+                max-width: 200px;
+            }
+            @media (max-width: $breakpoint480) {
+                max-width: 100%;
+            }
+        }
+        
+        
+        .swiper {
+        }
+        .mySwiper2 {
+            margin-bottom: 10px;
+        }
+        .swiper-wrapper {
+        }
+        .swiper-slide {
+            max-width: 100%;
+            width: 100%;
+            
+            img {
+                background: $mainWhite;
+                border-radius: 10px;
+                max-width: 100%;
+                width: 100%;
+            }
+        }
+        .swiper-next {
+        }
+        .swiper-prev {
+        }
+        .mySwiper {
+        }
+    }
+    
+    
+    
+    
+    
+    
+    
+    
+    
