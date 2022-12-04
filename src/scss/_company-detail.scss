@@ -28,7 +28,7 @@
         display: grid;
         grid-template-columns: 1fr 1fr 1fr 1fr;
         gap: 20px;
-        
+       
         @media (max-width: $breakpoint992) {
             grid-template-columns: 1fr 1fr;
         }
@@ -69,6 +69,10 @@
         }
         p{
             font-weight: 300;
+        }
+
+        @media (max-width: 1250px) {
+            min-width: auto;;
         }
     }
 }
