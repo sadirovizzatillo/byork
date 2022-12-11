@@ -77,6 +77,13 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
+        @media (max-width:690px) {
+         width: 82px;
+         .swiper-button-next,.swiper-button-prev{
+          width: 28px;
+          height: 32px;
+         }
+     }
     }
 
 
@@ -153,6 +160,13 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
+        @media (max-width:690px) {
+         width: 82px;
+         .swiper-button-next,.swiper-button-prev{
+          width: 28px;
+          height: 32px;
+         }
+     }
     }
 
 
@@ -163,4 +177,5 @@
 }
 .license-btn-next {
     background: $mainWhite;
+    
 }

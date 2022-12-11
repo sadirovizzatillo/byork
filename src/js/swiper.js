@@ -418,44 +418,7 @@ const swiperMission = new Swiper('.mission__swiper', {
 }
 });
 
-const historySwiper = new Swiper('.historys__swiper', {
-  slidesPerView: 8,
-  // spaceBetween: 30,
 
-  // Navigation arrows
-  navigation: {
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev',
-  },
-
-
-  // Responsive breakpoints
-  breakpoints: {
-  // when window width is >= 320px
-  320: {
-    slidesPerView: 8,
-  //   spaceBetween: 20
-  },
-  // when window width is >= 480px
-  480: {
-    slidesPerView: 15,
-  //   spaceBetween: 30
-  },
-  600:{
-    slidesPerView: 9,
-  },
-  700: {
-      slidesPerView: 12,
-      // spaceBetween: 30
-  },
-
-  992: {
-      slidesPerView:12,
-      // spaceBetween: 30
-      
-  },
-}
-});
 
 const exibitionSwiper = new Swiper('.exibition__swiper', {
   slidesPerView: 4,
@@ -571,7 +534,19 @@ const servicesSwiper = new Swiper('.services__swiper', {
 });
 
 const aimSwiper = new Swiper('.aim__swiper', {
-  slidesPerView: 4,
+  slidesPerView: 1,
+  // spaceBetween: 30,
+
+  // Navigation arrows
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+});
+
+
+const historySwiper = new Swiper('.historys__swiper', {
+  slidesPerView: 1,
   // spaceBetween: 30,
 
   // Navigation arrows
@@ -582,27 +557,4 @@ const aimSwiper = new Swiper('.aim__swiper', {
 
 
   // Responsive breakpoints
-  breakpoints: {
-  // when window width is >= 320px
-  320: {
-    slidesPerView: 1,
-  //   spaceBetween: 20
-  },
-  // when window width is >= 480px
-  480: {
-    slidesPerView: 2,
-  //   spaceBetween: 30
-  },
-
-  700: {
-      slidesPerView: 3,
-      // spaceBetween: 30
-  },
-
-  992: {
-      slidesPerView: 4,
-      // spaceBetween: 30
-      
-  },
-}
 });

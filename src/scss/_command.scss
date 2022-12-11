@@ -1,138 +1,293 @@
-.command{
-    .about-command{
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        background-color: #fff;
-        border-radius: 12px;
-        margin-bottom: 32px;
-        
-        @media (max-width:1035px) {
-            grid-template-columns: 1fr;
-        }
-    }
-    .about-command__left{
-        background-image: url("../img/commandowner.png");
-        background-size: cover;
-        background-repeat: no-repeat;
-        height: 700px;
-        display: flex;
-        justify-content: center;
-        align-items: flex-end;
-        border-radius: 24px;
-        p{
-            max-width: 400px;
+.command {
+   
+   .swiper-slide{
+      &-active > img{
+         height: 300px;
+      }
+   }
+   .beard {
+      
+      // .beard__menu
+      &__menu {
+         margin: 25px 0 30px;
+         margin-bottom: 15px;
+         display: flex;
+         align-items: center;
+         flex-wrap: wrap;
+         gap: 6px 6px;
+         
+         @media (max-width: $breakpoint480) {
+            display: none;
+         }
+      }
+      
+      // .beard__item
+      &__item {
+         
+         
+         a {
+            font-weight: 700;
+            padding: 6px 8px;
+            font-size: 11px;
+            line-height: 16px;
+            border-radius: 10px;
+            color: $mainBlack;
+            background: $mainWhite;
+         }
+      }
+      
+      // .beard__arrow
+      &__arrow {
+         position: relative;
+         top: -5px;
+         letter-spacing: 1px;
+      }
+      
+      // .beard__item-active
+      &__item-active {
+         a {
+            color: $mainGreen;
+         }
+      }
+   }
+   
+   .comanda {
+      font-style: normal;
+      font-weight: 700;
+      font-size: 30px;
+      line-height: 38px;
+      margin-bottom: 20px;
+      color: #2B2A28;
+      
+      @media(max-width:500px) {
+         font-size: 24px;
+      }
+   }
+   
+   
+   .about-command {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      background-color: #fff;
+      border-radius: 12px;
+      margin-bottom: 32px;
+      
+      @media (max-width:1035px) {
+         grid-template-columns: 1fr;
+      }
+   }
+   
+   .about-command__left {
+      background-image: url("../img/commandowner.png");
+      background-size: cover;
+      background-repeat: no-repeat;
+      height: 700px;
+      display: flex;
+      justify-content: center;
+      align-items: flex-end;
+      border-radius: 24px;
+      
+      p {
+         max-width: 440px;
+         padding: 0px 20px;
+         color: #fff;
+         font-weight: 300;
+         font-size: 16px;
+         line-height: 24px;
+         padding-bottom: 20px;
+      }
+      
+      @media (max-width:626px) {
+         background-size: contain;
+         height: 600px;
+      }
+      
+      @media (max-width:530px) {
+         background-size: contain;
+         height: 500px;
+      }
+      
+      @media (max-width:450px) {
+         background-size: cover;
+         height: 380px;
+         width: 100%;
+      }
+   }
+   
+   .about-command__right {
+      display: flex;
+      flex-direction: column;
+      padding: 30px;
+      position: relative;
+      
+      &::after {
+         content: "";
+         width: 1px;
+         background: rgba(5, 146, 114, 0.2);
+         position: absolute;
+         left: 88px;
+         top: 178px;
+         height: 422px;
+         
+         @media (max-width:1035px) {
+            height: 280px;
+         }
+         
+         @media (max-width:540px) {
+            display: none;
+         }
+      }
+      
+      .about-command__header {
+         display: flex;
+         flex-direction: column;
+         align-items: flex-start;
+         margin-bottom: 32px;
+         
+         h3 {
+            font-weight: 700;
+            font-size: 32px;
+            line-height: 1;
+            margin-bottom: 16px;
+         }
+         
+         p {
+            padding: 4px 8px;
+            background-color: $mainGreen;
+            border-radius: 12px;
             color: #fff;
+            font-weight: 700;
+            font-size: 14px;
+         }
+      }
+      
+      .about-command__item.quoteActive {
+         position: sticky;
+         opacity: 1;
+         transition: all .3s;
+      }
+      .about-command__item {
+         position: fixed;
+         height: 100px;
+         opacity: 0;
+         transition: all .3s;
+         display: flex;
+         align-items: center;
+         margin-bottom: 16px;
+         
+         @media (max-width:540px) {
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: flex-start;
+            
+            p {
+               margin-bottom: 12px;
+            }
+         }
+         
+         p {
+            font-weight: 700;
+            font-size: 18px;
+            line-height: 23px;
+            display: flex;
+            margin-right: 40px;
+            position: relative;
+            
+            &::after {
+               content: "";
+               width: 18px;
+               height: 18px;
+               background: #fff;
+               border: 6px solid $mainGreen;
+               border-radius: 50%;
+               position: absolute;
+               left: 50px;
+            }
+         }
+         
+         ul {
+            background-color: $mainBlueLight;
+            border-radius: 12px;
+            padding: 8px 16px;
+            position: relative;
+            width: 100%;
+            
+            
+            li {
+               font-weight: 300;
+               font-size: 12px;
+               line-height: 24px;
+            }
+            
+         }
+      }
+   }
+   
+   .command-member {
+      ul {
+         display: flex;
+         align-items: flex-end;
+      }
+      
+      header {
+         display: flex;
+         justify-content: space-between;
+         max-width: 600px;
+         width: 100%;
+         align-items: flex-end;
+         justify-content: flex-end;
+         margin-left: auto;
+         
+         
+         @media (max-width:690px) {
+            align-items: flex-start;
+            justify-content: flex-start;
+         }
+         
+         .command__btns {
+            position: absolute;
+            width: 100px;
+            top: 30px;
+            
+            @media (max-width:690px) {
+               right: 1px;
+               width: 82px;
+               
+               .swiper-button-next,
+               .swiper-button-prev {
+                  width: 28px;
+                  height: 32px;
+               }
+            }
+            
+            .command-next {
+               background: $mainBlue;
+            }
+            
+            .command-prev {
+               background: $mainBlue;
+            }
+         }
+      }
+      
+      .command__swiper-header {
+         display: flex;
+         flex-direction: column;
+         margin-right: 80px;
+         width: 100%;
+         h3 {
+            font-weight: 700;
+            font-size: 24px;
+            line-height: 1;
+            margin-bottom: 8px;
+         }
+         
+         p {
             font-weight: 300;
             font-size: 16px;
-            line-height: 24px;
-        }
-        
-        @media (max-width:626px) {
-            background-size: contain;
-            height: 600px;
-        }
-        @media (max-width:530px) {
-            background-size: contain;
-            height: 500px;
-        }
-        @media (max-width:450px) {
-            background-size: cover;
-            height: 380px;
-            width: 100%;
-        }
-    }
-    .about-command__right{
-        display: flex;
-        flex-direction: column;
-        padding: 30px;
-        position: relative;
-        &::after{
-            content: "";
-            width: 1px;
-            background: rgba(5, 146, 114, 0.2);
-            position: absolute;
-            left: 88px;
-            top: 178px;
-            height: 422px;   
-            
-            @media (max-width:1035px) {
-                height: 280px;
-            }
-            @media (max-width:540px) {
-                display: none;
-            }
-        }
-        .about-command__header{
-            display: flex;
-            flex-direction: column;
-            align-items: flex-start;
-            margin-bottom: 32px;
-            h3{
-                font-weight: 700;
-                font-size: 32px;
-                line-height: 1;
-                margin-bottom: 16px;
-            }
-            p{
-                padding: 4px 8px;
-                background-color: $mainGreen;
-                border-radius: 12px;
-                color: #fff;
-                font-weight: 700;
-                font-size: 14px;
-            }
-        }
-        .about-command__item{
-            display: flex;
-            align-items: center;
-            margin-bottom: 16px;
-            @media (max-width:540px) {
-                flex-direction: column;
-                justify-content: flex-start;
-                align-items: flex-start;
-
-                p{
-                    margin-bottom: 12px;
-                }
-            }
-            p{
-                font-weight: 700;
-                font-size: 18px;
-                line-height: 23px;
-                display: flex;
-                margin-right: 40px;
-                position: relative;
-                &::after{
-                    content: "";
-                    width: 18px;
-                    height: 18px;
-                    background: #fff;
-                    border: 6px solid $mainGreen;
-                    border-radius: 50%;
-                    position: absolute;
-                    left: 50px;
-                }
-            }
-            ul{
-                background-color: $mainBlueLight;
-                border-radius: 12px;
-                padding: 8px 16px;
-                position: relative;
-                width: 100%;
-                
-                
-                li{
-                    font-weight: 300;
-                    font-size: 12px;
-                    line-height: 24px;
-                }
-                
-            }
-        }
-    }
-    .command-member{
-        ul{
-            display: flex;
-        }   
-    }
+            line-height: 160%;
+            color: $mainGreen;
+         }
+      }
+   }
 }

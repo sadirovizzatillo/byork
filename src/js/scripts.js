@@ -5,6 +5,9 @@
 @@include('accordion.js')
 @@include('mapdata.js') 
 @@include('tabs.js') 
+@@include('animation-anime.js') 
+@@include('common.js') 
+@@include('tabs.js') 
 @@include('price-slider.js') 
 @@include('advertise.js') 
 

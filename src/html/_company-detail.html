@@ -1,43 +1,77 @@
 <section class="company-detail">
-    <div class="container">
-        <div class="detail-cards">
-            <div class="detail-cards__card-blue">
-                <h4>Детали компании</h4>
+   <div class="container">
+      <div class="detail-cards">
+         <div class="detail-cards__card-blue">
+            <h4>Детали компании</h4>
+         </div>
+         <div class="detail-cards__card">
+            <div class="number">
+
+               <h4>400 </h4><span>+</span>
             </div>
-            <div class="detail-cards__card">
-                <h4>400+</h4>
-                <p>Количество покупателей</p>
+            <p>Количество покупателей</p>
+         </div>
+         <div class="detail-cards__card">
+            <div class="number">
+
+               <h4>400 </h4><span>+</span>
             </div>
-            <div class="detail-cards__card">
-                <h4>400+</h4>
-                <p>Количество покупателей</p>
+            <p>Количество покупателей</p>
+         </div>
+         <div class="detail-cards__card">
+            <div class="number">
+
+               <h4>400 </h4><span>+</span>
             </div>
-            <div class="detail-cards__card">
-                <h4>400+</h4>
-                <p>Количество покупателей</p>
+            <p>Количество покупателей</p>
+         </div>
+      </div>
+      <div class="detail-cards__two">
+         <div class="detail-cards__card">
+            <div class="number">
+
+               <h4>400 </h4><span>+</span>
             </div>
-        </div>
-        <div class="detail-cards__two">
-            <div class="detail-cards__card">
-                <h4>400+</h4>
-                <p>Количество покупателей</p>
+            <p>Количество покупателей</p>
+         </div>
+         <div class="detail-cards__card">
+            <div class="number">
+
+               <h4>400 </h4><span>+</span>
             </div>
-            <div class="detail-cards__card">
-                <h4>400+</h4>
-                <p>Количество покупателей</p>
+            <p>Количество покупателей</p>
+         </div>
+         <div class="detail-img__card banner">
+            <img class="banner_image" src="../img/banner.png" alt="">
+            <div class="item-card">
+               <p class="title">OOO “BYORK” (бывшая OOO “Orient Med”) основанная в 2015 году на сегодняшний день
+                  является одной  оборудования в
+                  Узбекистане. . </p>
+
+               <div class="about_companie">
+                  <p>Подробнее о компании</p>
+                  <img src="../img/preww.svg" alt="">
+               </div>
             </div>
-            <div class="detail-img__card">
-                <p>lorem25. </p>
-                <div>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias blanditiis commodi atque eveniet ea eos.</p>
-                    <button>salom</button>
-                </div>
-            </div>
-        </div>
-    </div>
+         </div>
+      </div>
+   </div>
 </section>
 
+<script>
+   window.addEventListener('load', () => {
+      let count = document.querySelectorAll('.detail-cards__card h4')
 
+      for (let i = 0; i < count.length; i++) {
+         count[i].innerHTML = 0;
+         const interval = setInterval(() => {
+            count[i].innerHTML = +count[i].innerHTML + 10
+         }, 50);
 
+         setTimeout(() => {
+            clearInterval(interval)
+         }, 2000);
+      }
 
-
+   })
+</script>

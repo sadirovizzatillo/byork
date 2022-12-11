@@ -1,5 +1,13 @@
 <section class="command">
     <div class="container">
+        <ul class="beard__menu">
+            <li class="beard__item"><a href="index.html">главная</a></li>
+            
+            <p class="beard__arrow">...</p>
+            
+            <li class="beard__item beard__item-active"><a href="product.html">выставки</a></li>
+        </ul>
+        <h3 class="comanda">Наша команда</h3>
         <div class="about-command">
             <div class="about-command__left">
                 <p>“Повторить то что уже существует и добиться успеха в этом очень легко, а вопреки всем критикам создать самому что-то уникальное и идти вперёд - это сложно!, но интересно!” </p>
@@ -11,14 +19,14 @@
                 </header>
                 
                 <div class="about-command__year">
-                    <div class="about-command__item">
+                    <div class="about-command__item first-quote">
                         <p>2013</p>
                         <ul>
                             <li>Поступил в Ташкентский Университет Информационных Технологий.</li>
                             <li>Первое место работы- Рекламное агенство.</li>
                         </ul>
                     </div>
-                    <div class="about-command__item">
+                    <div class="about-command__item second-quote">
                         <p>2013</p>
                         <ul>
                             <li>Поступил в Ташкентский Университет Информационных Технологий.</li>
@@ -26,14 +34,14 @@
                             <li>После окончания учёбы работал как и в больнице, так и разрабатывал веб-сайты.</li>
                         </ul>
                     </div>
-                    <div class="about-command__item">
+                    <div class="about-command__item third-quote">
                         <p>2013</p>
                         <ul>
                             <li>Поступил в Ташкентский Университет Информационных Технологий.</li>
                             <li>Первое место работы- Рекламное агенство.</li>
                         </ul>
                     </div>
-                    <div class="about-command__item">
+                    <div class="about-command__item fourth-quote">
                         <p>2013</p>
                         <ul>
                             <li>Поступил в Ташкентский Университет Информационных Технологий.</li>
@@ -47,6 +55,26 @@
         
         <div class="command-member">
             <div class="command__swiper swiper">
+                <header>
+                    <div class="command__swiper-header">
+                        <h3>Алиева Раъно Умидовна</h3>
+                        <p>Заместитель директора по контролю качества</p>
+                    </div>
+                    <div class="command__btns">
+                        <div class="command-next swiper-button-next">
+                            <svg width="24" height="24" fill="white">
+                                <path
+                                d="M7.293 4.707 14.586 12l-7.293 7.293 1.414 1.414L17.414 12 8.707 3.293 7.293 4.707z" />
+                            </svg>
+                        </div>
+                        <div class="command-prev swiper-button-prev">
+                            <svg width="24" height="24" fill="white">
+                                <path
+                                d="M7.293 4.707 14.586 12l-7.293 7.293 1.414 1.414L17.414 12 8.707 3.293 7.293 4.707z" />
+                            </svg>
+                        </div>
+                    </div>
+                </header>
                 <ul class="swiper-wrapper">
                     <li class="swiper-slide">
                         <img src="../img/member.png" alt="">
@@ -70,3 +98,31 @@
             </div>
         </div>
     </section>
+    
+    
+    
+    <script>
+        var quote = document.getElementsByClassName('about-command__item');
+        quote[0].classList.add('quoteActive');
+        
+        for (let i = 0; i < quote.length; i++) {
+            window.addEventListener('scroll', function() {
+                var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+                if (scrollTop <= 100) {
+                    quote[i].classList.remove('quoteActive');
+                    quote[0].classList.add('quoteActive');
+                    
+                } else if (scrollTop <= 200) {
+                    quote[i].classList.remove('quoteActive');
+                    quote[1].classList.add('quoteActive');
+                    
+                } else if (scrollTop <= 300) {
+                    quote[i].classList.remove('quoteActive');
+                    quote[2].classList.add('quoteActive');
+                }else if (scrollTop <= 600) {
+                    quote[i].classList.remove('quoteActive');
+                    quote[3].classList.add('quoteActive');
+                }
+            })
+        }
+    </script>
